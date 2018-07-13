@@ -41,6 +41,9 @@
 // 2017/07/04 Y.Uesugi		舗詳細ページにおいて、選択した拠点アイコンが前面に表示するよう修正
 // 2017/08/09 T.Luu         中心アイコンをクリックすると吹き出しを表示という処理を追加
 // 2018/06/26 Y.Matsukawa	バスルート：タイムアウト対策
+// 2018/06/29 Dam Phan		Apply new design #18619
+// 2018/06/21 Chien Nguyen		Change filter of nearest shop map #18858
+// 2018/07/03 N.Wada		複合ルート検索中は画面操作を制限する
 // ------------------------------------------------------------
 require_once('/home/emap/src/p/inc/define.inc');
 require_once('/home/emap/src/p/inc/act_get_parm.inc');
@@ -417,15 +420,7 @@ function ZdcEmapGetCondTime() {
 
 		// Chien Nguyen add [
 		// Set condition cond101 and cond102 of tap 郵便サービスから選ぶ
-		var cond101;
-		if ($('input[name=youbi1]:checked').val()) {
-			cond101 = $('input[name=youbi1]:checked').val();
-		} else if($('select[name=timespan1]').val()){
-			cond101 = $('select[name=timespan1]').val();
-		}
-		if ($('input[name=youbi1]:checked').val() && $('select[name=timespan1]').val()) {
-			cond101 = $('input[name=youbi1]:checked').val() + $('select[name=timespan1]').val();
-		}
+		var cond101 = $('select[name=youbi1]').val() + $('select[name=timespan1]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
 
 		$('input[name=cond101]').val('');
 		$('input[name=cond102]').val('');
@@ -441,15 +436,8 @@ function ZdcEmapGetCondTime() {
 		}
 
 		// Set condition cond103 and cond104 of tap 貯金サービスから選ぶ
-		var cond103;
-		if ($('input[name=youbi2]:checked').val()) {
-			cond103 = $('input[name=youbi2]:checked').val();
-		} else if($('select[name=timespan2]').val()){
-			cond103 = $('select[name=timespan2]').val();
-		}
-		if ($('input[name=youbi2]:checked').val() && $('select[name=timespan2]').val()) {
-			cond103 = $('input[name=youbi2]:checked').val() + $('select[name=timespan2]').val();
-		}
+		var cond103 = $('select[name=youbi2]').val() + $('select[name=timespan2]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
+
 		$('input[name=cond103]').val('');
 		$('input[name=cond104]').val('');
 
@@ -472,15 +460,8 @@ function ZdcEmapGetCondTime() {
 		}
 
 		// Set condition cond105 and cond106 of tap 保険サービスから選ぶ
-		var cond105;
-		if ($('input[name=youbi3]:checked').val()) {
-			cond105 = $('input[name=youbi3]:checked').val();
-		} else if($('select[name=timespan3]').val()){
-			cond105 = $('select[name=timespan3]').val();
-		}
-		if ($('input[name=youbi3]:checked').val() && $('select[name=timespan3]').val()) {
-			cond105 = $('input[name=youbi3]:checked').val() + $('select[name=timespan3]').val();
-		}
+		var cond105 = $('select[name=youbi3]').val() + $('select[name=timespan3]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
+		
 		$('input[name=cond105]').val('');
 		$('input[name=cond106]').val('');
 		$('input[name=cond105]').val(cond105);
@@ -497,28 +478,11 @@ function ZdcEmapGetCondTime() {
 		}
 
 		// Set condition cond107 of tap ATMから選ぶ
-		var cond107;
-		$('input[name=cond107]').val('');
-		if ($('input[name=youbi4]:checked').val()) {
-			cond107 = $('input[name=youbi4]:checked').val();
-		} else if($('select[name=timespan4]').val()){
-			cond107 = $('select[name=timespan4]').val();
-		}
-		if ($('input[name=youbi4]:checked').val() && $('select[name=timespan4]').val()) {
-			cond107 = $('input[name=youbi4]:checked').val() + $('select[name=timespan4]').val();
-		}
+		var cond107 = $('select[name=youbi4]').val() + $('select[name=timespan4]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
 		$('input[name=cond107]').val(cond107);
 
 		// Set condition cond108 and cond109 of tap 他サービスから選ぶ
-		var cond108;
-		if ($('input[name=youbi5]:checked').val()) {
-			cond108 = $('input[name=youbi5]:checked').val();
-		} else if($('select[name=timespan5]').val()){
-			cond108 = $('select[name=timespan5]').val();
-		}
-		if ($('input[name=youbi5]:checked').val() && $('select[name=timespan5]').val()) {
-			cond108 = $('input[name=youbi5]:checked').val() + $('select[name=timespan5]').val();
-		}
+		var cond108 = $('select[name=youbi5]').val() + $('select[name=timespan5]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
 
 		$('input[name=cond108]').val('');
 		$('input[name=cond109]').val('');
@@ -1525,6 +1489,10 @@ function ZdcEmapSrchCombRootDept(keyword) {
 
 <?php // add 2017/02/27 N.Wada ?>
 function ZdcEmapSrchCombRootResult(lat, lon, fromname, whenno, date) {
+	<?php // add 2018/07/03 N.Wada [ ?>
+	var modal = document.getElementById("modal-full");
+	if (modal) modal.style.display = 'block';
+	<?php // add 2018/07/03 N.Wada ] ?>
 	<?php // add 2018/06/26 Y.Matsukawa [ ?>
 	var procimg = document.getElementById("combRouteProcessing");
 	if (procimg) procimg.style.display = 'block';
@@ -1538,6 +1506,9 @@ function ZdcEmapSrchCombRootResult(lat, lon, fromname, whenno, date) {
 	if (whenno) url+= "&whenno="+whenno;
 	if (date) url+= "&date="+date;
 	ZdcEmapHttpRequestHtml(url, function(html,status){
+		<?php // add 2018/07/03 N.Wada [ ?>
+		if (modal) modal.style.display = 'none';
+		<?php // add 2018/07/03 N.Wada ] ?>
 		if(status) html = "<?PHP echo $D_MSG_ERR_JS_REQUEST; ?> cond["+status+"]";
 		ZdcEmapSrchCombRootResultObj.innerHTML = html;
 	});

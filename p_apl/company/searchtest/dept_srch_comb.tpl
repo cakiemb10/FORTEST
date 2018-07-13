@@ -32,8 +32,8 @@
 	<!-- <img src="{rval D_FREE_VAR:D_DIR_COMPANY_HTTPS}images/load.gif" id="combRouteProcessing" style="display:none;position:absolute;top:10px;left:150px;"> -->
 	<div id="combRouteProcessing">
 		<div style="position:relative;">
-			<img id="combRouteProcessing-bgimg" src="{rval D_DIR_BASE}img/load-back.png" />
+			<img id="combRouteProcessing-bgimg" src="{rval D_DIR_BASE}img/load-back210.png" />
 			<img id="combRouteProcessing-animg" src="{rval D_DIR_BASE}img/load.gif" />
-			<div id="combRouteProcessing-text">ルート検索中</div>
+			<div id="combRouteProcessing-text">ルート検索中です。しばらくお待ちください。</div>
 		</div>
 	</div>
