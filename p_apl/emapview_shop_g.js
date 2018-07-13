@@ -41,8 +41,6 @@
 // 2017/07/04 Y.Uesugi		舗詳細ページにおいて、選択した拠点アイコンが前面に表示するよう修正
 // 2017/08/09 T.Luu         中心アイコンをクリックすると吹き出しを表示という処理を追加
 // 2018/06/26 Y.Matsukawa	バスルート：タイムアウト対策
-// 2018/06/29 Dam Phan		Apply new design #18619
-// 2018/06/21 Chien Nguyen		Change filter of nearest shop map #18858
 // 2018/07/03 N.Wada		複合ルート検索中は画面操作を制限する
 // ------------------------------------------------------------
 require_once('/home/emap/src/p/inc/define.inc');
@@ -74,7 +72,7 @@ ZdcEmapCondOpts[<?php echo $i; ?>] = new Array();
 <?php
 	foreach ($cnd['opts'] as $n => $op) {
 ?>
-		ZdcEmapCondOpts["<?php echo $i; ?>"]["<?php echo $n; ?>"] = "<?php echo $op[0]; ?>";
+ZdcEmapCondOpts[<?php echo $i; ?>][<?php echo $n; ?>] = "<?php echo $op[0]; ?>";
 <?php
 			}
 // add 20150216 F.Yokoi [
@@ -226,11 +224,8 @@ function ZdcEmapSearchShop() {
 	//自動検索イベント停止
 	ZdcEmapSearchEventStop();
 	//絞り込み条件取得
-	if(typeof(search_flg) != 'undefined'){
-		cond = ZdcEmapGetCondTime();
-	} else {
-		cond = ZdcEmapGetCond();
-	}
+	cond = ZdcEmapGetCond();
+
 	var opts = new ZdcNearShopOptions();
 	opts.cid='<?PHP echo $D_DATA_CID; ?>';
 	opts.lat = center.lat;
@@ -263,11 +258,7 @@ function ZdcEmapSearchShop() {
 	//リストを表示する
 	ZdcEmapSearchShopList(0);
 	//アイコンを表示する
-	if (typeof(search_flg) != 'undefined') {
-		ZdcEmapNearShop.searchPost(opts,ZdcEmapSearchShopResult);
-	} else {
-		ZdcEmapNearShop.search(opts,ZdcEmapSearchShopResult);
-	}
+	ZdcEmapNearShop.search(opts,ZdcEmapSearchShopResult);
 }
 
 //絞り込み条件組み立て
@@ -405,203 +396,6 @@ if (is_array($D_COND_GRP) && count($D_COND_GRP)) {
 	}
 	return cond;
 }
-
-/***
- * Chien Nguyen Add 21/26/2018
- * Function get condition for search with time
-***/
-function ZdcEmapGetCondTime() {
-	var cond="";
-	var condArr=new Array();
-	ZdcEmapCondParms = "";
-	if(document.ZdcEmapCondForm) {
-		var obj,chk=new Array(),chkcnt=0,col=new Array(),colcnt=0,fw=new Array(),fwcnt=0;
-		var all=new Array(),allcnt=0,allcondno=new Array(),condno='';
-
-		// Chien Nguyen add [
-		// Set condition cond101 and cond102 of tap 郵便サービスから選ぶ
-		var cond101 = $('select[name=youbi1]').val() + $('select[name=timespan1]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
-
-		$('input[name=cond101]').val('');
-		$('input[name=cond102]').val('');
-		if ($('input[name=cond2]:checked').val()) {
-			$('input[name=cond101]').val(cond101);
-		}
-		if ($('input[name=cond7]:checked').val()) {
-			$('input[name=cond102]').val(cond101);
-		}
-		if (!$('input[name=cond2]:checked').val() && !$('input[name=cond7]:checked').val()) {
-			$('input[name=cond101]').val(cond101);
-			$('input[name=cond102]').val(cond101);
-		}
-
-		// Set condition cond103 and cond104 of tap 貯金サービスから選ぶ
-		var cond103 = $('select[name=youbi2]').val() + $('select[name=timespan2]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
-
-		$('input[name=cond103]').val('');
-		$('input[name=cond104]').val('');
-
-		$('input[name=cond103]').val(cond103);
-		if ($('input[name=cond16]:checked').val()) {
-			$('input[name=cond104]').val(cond103);
-			if (!$('input[name=cond8]:checked').val() ||
-				!$('input[name=cond9]:checked').val() ||
-				!$('input[name=cond10]:checked').val() ||
-				!$('input[name=cond11]:checked').val() ||
-				!$('input[name=cond12]:checked').val() ||
-				!$('input[name=cond13]:checked').val() ||
-				!$('input[name=cond14]:checked').val() ||
-				!$('input[name=cond15]:checked').val() ||
-				!$('input[name=cond17]:checked').val() ||
-				!$('input[name=cond18]:checked').val()
-			) {
-				$('input[name=cond103]').val('');
-			}
-		}
-
-		// Set condition cond105 and cond106 of tap 保険サービスから選ぶ
-		var cond105 = $('select[name=youbi3]').val() + $('select[name=timespan3]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
-		
-		$('input[name=cond105]').val('');
-		$('input[name=cond106]').val('');
-		$('input[name=cond105]').val(cond105);
-		if ($('input[name=cond24]:checked').val()) {
-			$('input[name=cond106]').val(cond105);
-			if (!$('input[name=cond19]:checked').val() ||
-				!$('input[name=cond20]:checked').val() ||
-				!$('input[name=cond21]:checked').val() ||
-				!$('input[name=cond22]:checked').val() ||
-				!$('input[name=cond23]:checked').val()
-			) {
-				$('input[name=cond105]').val('');
-			}
-		}
-
-		// Set condition cond107 of tap ATMから選ぶ
-		var cond107 = $('select[name=youbi4]').val() + $('select[name=timespan4]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
-		$('input[name=cond107]').val(cond107);
-
-		// Set condition cond108 and cond109 of tap 他サービスから選ぶ
-		var cond108 = $('select[name=youbi5]').val() + $('select[name=timespan5]').val();	// mod 2018/06/29 Dam Phan Change youbi to dropdownlist
-
-		$('input[name=cond108]').val('');
-		$('input[name=cond109]').val('');
-		$('input[name=cond109]').val(cond108);
-		if ($('input[name=cond30]:checked').val()) {
-			$('input[name=cond108]').val(cond108);
-			if ( !$('input[name=cond26]:checked').val() ||
-				 !$('input[name=cond27]:checked').val() ||
-				 !$('input[name=cond28]:checked').val() ||
-				 !$('input[name=cond29]:checked').val()
-			) {
-				$('input[name=cond109]').val('');
-			}
-		}
-		// Chien Nguyen add ]
-
-		for(var i = 0;i < document.ZdcEmapCondForm.elements.length;i ++) {
-			obj = document.ZdcEmapCondForm.elements[i];
-			if(!obj) break;
-			condno = obj.name.replace('cond','');
-			switch(obj.type) {
-				case "checkbox":
-					if(obj.checked == true) {
-						ZdcEmapCondParms += "&cond"+condno+"=1";
-						chk[chkcnt] = ZdcEmapCondVal[condno];
-						all[allcnt] = chk[chkcnt]; allcondno[allcnt] = condno; allcnt++;
-						chkcnt ++;
-					}
-					break;
-				case "text":
-					if(obj.value) {
-						<?php // mod 2015/02/16 F.Yokoi [ ?>
-						if(obj.className == 'cond') {
-							ZdcEmapCondParms += "&cond"+condno+"="+obj.value;
-							col[colcnt] = ZdcEmapCondVal[condno]+obj.value;
-							all[allcnt] = col[colcnt]; allcondno[allcnt] = condno; allcnt++;
-							colcnt ++;
-						} else {
-							fw[fwcnt] = "FREE_SRCH:FW:"+"'"+obj.value+"'";
-							all[allcnt] = fw[fwcnt]; allcondno[allcnt] = condno; allcnt++;
-							fwcnt ++;
-						}
-						<?php // mod 2015/02/16 F.Yokoi ] ?>
-					}
-					break;
-				case "radio":
-					break;
-				case "button":
-					break;
-				default:
-					if(obj.value) {
-						if (condno >= 101 && condno <= 109) {
-							col[colcnt] = ZdcEmapCondOpts[condno][obj.value];
-						} else {
-							col[colcnt] = ZdcEmapCondVal[condno];
-						}
-						all[allcnt] = col[colcnt]; allcondno[allcnt] = condno; allcnt++;
-						colcnt ++;
-					}
-					break;
-			}
-		}
-
-		var cno,newcond = "",newqs = "";
-		var qstr = QSTRING.split('&');
-		for(var i=0; i<allcnt; i++) {
-			cno = allcondno[i];
-			newcond += "cond"+cno+"=1&";
-		}
-		for(var q=0; q<qstr.length; q++) {
-			if( qstr[q] == '' ) continue;
-			if( qstr[q].substr(0,4) != 'cond' ){
-				newqs += qstr[q]+"&";
-			}
-		}
-		QSTRING = newqs + newcond;
-
-		// グルーピング設定されている場合
-		if (ZdcEmapCondGroup.length > 0) {
-			for(var i = 0;i < allcnt;i ++) {
-				cn = allcondno[i];
-				gr = ZdcEmapCondGroup[cn];
-				if (gr != undefined) {
-					if(!condArr[gr]) condArr[gr] = '';
-					if(condArr[gr]) condArr[gr] += ' '+ZdcEmapCondAndOr[gr]+' ';
-					condArr[gr] += all[i];
-				}
-			}
-			// console.log(ZdcEmapCondGroup);
-			// console.log(allcondno);
-			// console.log(condArr);
-			if(condArr.length > 0) {
-<?php
-if (is_array($D_COND_GRP) && count($D_COND_GRP)) {
-	foreach ($D_COND_GRP as $g => $grp) {
-?>
-				if(condArr[<?php echo $g ?>]) {
-					if(cond) cond += ' <?PHP echo $D_COND_GRP_ANDOR; ?> ';
-					cond += '('+condArr[<?php echo $g ?>]+')';
-				}
-<?php
-	}
-}
-?>
-			}
-		}
-	}
-	if(typeof ZdcEmapCondAppend[0] !== 'undefined'){
-		if( ZdcEmapCondAppend[0] != ''){
-			if(cond != ''){
-				cond = '('+cond+') '+ZdcEmapCondAppend[1]+' '+ZdcEmapCondAppend[0];
-			} else {
-				cond = ZdcEmapCondAppend[0];
-			}
-		}
-	}
-	return cond;
-}
-
 
 //検索結果の処理
 var ZdcEmapConvertDatumH = false;	<?php // add 2016/08/15 Y.Matsukawa ?>
@@ -1119,19 +913,10 @@ function ZdcEmapSearchShopList(page) {
 	// add 2016/06/22 Y.Matsukawa [
 	if($_SERVER['HTTP_HOST']){ echo 'url += "&PARENT_HTTP_HOST='.urlencode($_SERVER['HTTP_HOST']).'";'; }
 	// add 2016/06/22 Y.Matsukawa ] ?>
-	// Mod 2018/06/21 Chien Nguyen [
-	if(typeof(search_flg) != 'undefined'){
-		ZdcEmapHttpRequestHtmlPost(url, function(html,status){
-			if(status) html = "<?PHP echo $D_MSG_ERR_JS_REQUEST; ?> list["+status+"]";
-			ZdcEmapListObj.innerHTML = html;
-		}, false, 2);
-	} else {
-		ZdcEmapHttpRequestHtml(url, function(html,status){
-			if(status) html = "<?PHP echo $D_MSG_ERR_JS_REQUEST; ?> list["+status+"]";
-			ZdcEmapListObj.innerHTML = html;
-		}, false, 2);
-	}
-	// Mod 2018/06/21 Chien Nguyen ]
+	ZdcEmapHttpRequestHtml(url, function(html,status){
+		if(status) html = "<?PHP echo $D_MSG_ERR_JS_REQUEST; ?> list["+status+"]";
+		ZdcEmapListObj.innerHTML = html;
+	}, false, 2);
 }
 
 //フキダシ表示
