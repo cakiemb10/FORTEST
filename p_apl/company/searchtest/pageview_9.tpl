@@ -13,5 +13,7 @@
  </div><!--/group-id-->
 </div>
 
+<div id="modal-full"></div>
+
 </body>
 </html>
