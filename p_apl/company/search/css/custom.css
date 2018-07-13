@@ -1,0 +1,1063 @@
+/* カスタマイズ用のCSS定義をここに記述してください */
+body {
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック",sans-serif;
+}
+/*フッター*/
+div#site-info {
+    clear: both;
+    width: 950px;
+    /* margin: 3.4em 0 0 0; */
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px solid #E5E5E5;
+}
+div#site-info div.group-id {
+    height: 25px;
+    margin-top: 1px;
+    position: relative;
+}
+div#site-info div.copy-right p {
+    position: absolute;
+    top: 7px;
+    left: 33px;
+}
+div#site-info div.copy-right address {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+div#site-info div.copy-right {
+    border-top:25px solid #CC0000;
+}
+div#site-info div.copy-right p, div#site-info div.copy-right address{
+    top:0px;
+}
+div#site-info div.copy-right p{
+    left:0px;
+}
+#fuddaNaviArea {
+    clear:both;
+    width:930px;
+    height:24px;
+    margin-top: 10px;
+}
+
+#fuddaNaviArea ul{
+    margin-left:33px;
+    padding-left: 0px;
+}
+#fuddaNaviArea ul li {
+    font-size:12px;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+}
+#fuddaNaviArea li#nLogo {
+    float:left;
+    margin:1px 20px 7px 0px;
+}
+#fuddaNaviArea li.link {
+    float:left;
+    margin:0 0 0 10px;
+}
+
+/*絞込条件*/
+#condMsg {
+    float: left;
+    margin: 10px;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tabsetIn {
+    width: 930px;
+}
+
+.tabsetIn {
+    clear: both;
+    height: 192px;
+    position: relative;
+}
+
+.tabBtn, .tabContents {
+    background-color: #fff;
+    /*border: 1px solid #999;*/
+}
+
+.tabContents {
+    width: 902px;
+    min-height: 130px;
+    padding: 10px;
+    text-align: left;
+}
+
+.condSection {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+}
+.condSection {
+	font-size: 12px;
+	line-height: 18px;
+}
+.condSection input[type="checkbox"] {
+	vertical-align: middle;
+}
+
+.condCommon {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.condCommonJkn {
+    background-color: #F8F4F1;
+    border: 1px solid #E1E1E1;
+    padding: 4px;
+}
+
+.condCommon ul {
+    display: inline-block;
+}
+
+.condCommonJkn input[type="radio"],
+.condCommonJkn input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 6px;
+    display: inline !important;
+}
+
+.condCommonJkn li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.condCommonJkn .park {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.condCommonBtn {
+    padding-left: 20px;
+}
+
+/*:checked tab*/
+.checktab > li {
+    float: left;
+    width: 20%;
+}
+
+.checktab .tabBtn {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 7px 7px 0 0;
+}
+
+.checktab .tabBtn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.checktab input[type="radio"] {
+    display: none;
+}
+
+.checktab input[type="radio"]:checked ~ .tabContents {
+    display: block;
+}
+
+.checktab input[type="radio"]:checked + .tabBtn {
+    background-color: #fff;
+    cursor: default;
+    color: #fff;
+}
+
+.checktab .tabContents {
+    position: absolute;
+    top: 40px ;
+    left: 0;
+    display: none;
+}
+
+/*店舗FW一覧*/
+#searchShopListTitle,
+#searchShopListExp,
+#searchShopListData,
+#searchShopListPage {
+    width: 800px;
+}
+
+#searchShopListData td:last-child {
+    width: 150px;
+}
+
+#searchShopListData td {
+    background-color: #fff;
+}
+
+.searchShopListDataNm img {
+    vertical-align: middle;
+}
+
+.searchShopListDataNm .listNote {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/*店舗リスト一覧*/
+/*駅FW一覧*/
+#searchTableTitle,
+#searchTableExp,
+table.searchTableData,
+#searchTablePage {
+    width: 800px;
+}
+
+table.searchTableData {
+    background-color: #fff;
+}
+
+/*駅リスト（全国）一覧*/
+#searchAddrTableTitle,
+#searchAddrTableExp,
+table.searchAddrTableData,
+#searchAddrTablePage {
+    width: 800px;
+}
+
+table.searchAddrTableData {
+    background-color: #fff;
+}
+
+/*郵便番号FW一覧*/
+#searchListTitle,
+#searchListExp,
+#searchListData,
+.searchListPage {
+    width: 800px;
+}
+
+#searchListData td {
+    background-color: #fff;
+}
+
+/*エラー画面*/
+#searchErrorTitle,
+#searchErrorExp,
+#searchErrorLink {
+    width: 800px;
+}
+
+/*地図注意文*/
+/*
+#mapCaution {
+    position: relative;
+    top: -20px;
+    width: 500px;
+}
+*/
+#mapCaution {
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+#mapCaution p {
+    font-size: 12px;
+    text-align: left;
+}
+
+/*最寄り一覧画面*/
+.kyotenListName .listNote {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/*詳細画面*/
+#kyotenName {
+    text-align: left;
+}
+
+#kyotenHd,
+#kyotenDtl {
+    width: auto;
+}
+#kyotenDtl {
+    text-align: left;
+    padding-left: 8px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+#ZdcEmapDetail {
+    margin-right: 10px;
+}
+
+#ZdcEmapDetail table,
+#ZdcEmapDetail tbody,
+#ZdcEmapDetail thead,
+#ZdcEmapDetail tfoot,
+#ZdcEmapDetail tr,
+#ZdcEmapDetail th,
+#ZdcEmapDetail td {
+    display: block;
+}
+
+#detailTabs .tabsetIn {
+    clear: both;
+    height: 1500px;
+    position: relative;
+}
+/*
+#detailTabs .tabBtn, .tabContents {
+    background-color: #fff;
+    border: 1px solid #999;
+}
+
+#detailTabs .tabContents {
+    width: 910px;
+    min-height: 120px;
+    padding: 10px;
+    text-align: left;
+}
+*/
+/*
+本家サイトよりコピー（ここから）
+タブコンテンツ
+---------------------------------*/
+.sectionDetail{
+	margin:0 16px;
+	padding-bottom:16px;
+}
+.sectionDetailInner{
+	padding:28px 36px 10px;
+	max-height: 100%;
+	font-size: 12px;
+}
+
+.sectionDetailInner h3{
+margin-bottom:13px;
+padding-left:13px;
+line-height:1.6;
+}
+.sectionDetailInner h4{
+margin:0 0 3px;
+padding:0;
+line-height:1.6;
+font-size:100%;
+}
+h5{
+margin:0;
+padding:0;
+line-height:1.6;
+font-size:100%;
+}
+.sectionDetailInner p{
+margin-bottom:13px;
+line-height:1.6;
+background-color:#fff;
+}
+.sectionDetailInner ul{
+margin:0 0 13px 5px;
+padding:0 0 0 13px;
+line-height:1.6;
+}
+.sectionDetailInner li{
+margin:0;
+padding:0;
+background-color:#fff;
+}
+.sectionDetailInner dl{
+margin:0 0 20px;
+padding:0;
+line-height:1.6;
+background-color:#fff;
+}
+.sectionDetailInner dt{
+margin:0;
+padding:0;
+background-color:#fff;
+}
+.sectionDetailInner dd{
+margin:0 0 0 13px;
+padding:0;
+background-color:#fff;
+}
+
+/*リストマークなし*/
+.sectionTabInnerW ul.noListStyle{
+margin-left:0;
+padding-left:0;
+list-style:none;
+}
+.sectionTabInnerW ul.noListStyle ul{
+margin-left:13px;
+list-style:disc;
+}
+.sectionTabInnerW ul.noListStyle .txtIndent{
+margin-left:13px;
+}
+
+/*電話帳画像あり*/
+.img_tel{
+min-height:54px;
+padding:10px 10px 8px 75px;
+border:1px solid #ccc;
+background:url(../images/pic_inquiry_tel.gif) 8px 8px no-repeat;
+}
+* html .img_tel{
+height:72px;
+}
+
+#headline {
+    padding-bottom: 3px;
+    color: #181818;
+    text-align: left;
+    font-size: 84%;
+    line-height: 1.331;}
+.section {
+    background: rgba(0, 0, 0, 0) url("../images/bg_sectionBtm.gif") no-repeat scroll left bottom;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+#headline .sectionInner {
+    padding: 3px 3px 1px;
+}
+.sectionInner {
+    background: rgba(0, 0, 0, 0) url("../images/bg_sectionTop.gif") repeat scroll left top;
+}
+div#header::after, div#global-elements ul::after, div#global-elements::after, .clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#area_news {
+    background: rgba(0, 0, 0, 0) url("../images/bg_newsBtm.gif") repeat-y scroll left top;
+    margin: 0;
+    min-height: 33px;
+    padding: 0;
+    width: 100%;
+    border: medium none;
+    border-collapse: collapse;
+    font-size: 100%;
+}
+#area_news td {
+	border: medium none;
+    border-collapse: collapse;
+    font-size: 100%;
+    color: #181818;
+    line-height: 1.331;
+}
+div#header, div#global-elements ul, div#global-elements, .clearfix {
+    display: block;
+}
+div#header {
+    width: 950px;
+    background-color: #fff;
+}
+div#header div#branding {
+    float: left;
+    padding: 15px 15px 0;
+    width: 295px;
+}
+p#logo {
+    width: 281px;
+    margin: 0;
+    padding: 0;
+}
+div#branding p#logo img {
+    border: 0 none;
+    display: block;
+    vertical-align: bottom;
+}
+#headline .sectionInner {
+    padding: 3px 3px 1px;
+}
+#str_title {
+    background: #f8f6f1 url("../images/bg_barH1_2.gif") no-repeat scroll left center;
+    font-size: 16px;
+    line-height: 1.6 !important;
+    margin: 0;
+    padding: 7px 7px 7px 21px;
+    position: relative;
+    width: auto;
+}
+h1 .title_area {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+h1 img {
+    display: block;
+    float: left;
+    margin: 2px 2px 0 0;
+    vertical-align: middle;
+}
+.str_title_hira {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6 !important;
+}
+.str_title_kana {
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.6 !important;
+}
+
+
+.subSection {
+	background-color: #F8F4F1;
+	border: 1px solid #E1E1E1;
+    /*background: rgba(0, 0, 0, 0) url("../images/bg_subSectionBtm.gif") no-repeat scroll left bottom;*/
+    padding: 7px;
+    width: 910px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 18px;
+}
+.subSectionInner {
+    background: rgba(0, 0, 0, 0) url("../images/bg_subSectionTop.gif") no-repeat scroll left top;
+    padding: 10px 10px 1px;
+}
+.subSection dt {
+    font-weight: bold;
+    margin: 5px 5px 0 0;
+    padding: 6px 0;
+    width: 14em;
+}
+.subSection dd {
+    background: rgba(0, 0, 0, 0) url("../images/bg_dotVertical.gif") repeat-y scroll left top;
+    float: left;
+    margin: 0;
+    padding: 5px 0;
+}
+input[type="checkbox"] {
+	margin-right: 2px;
+	vertical-align: middle;
+}
+/*
+本家サイトよりコピー（ここまで）
+---------------------------------*/
+
+.fsMapButton {
+    background-color: #FF6600;
+    border-color: #FF6600;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+}
+table.searchTopEntTable td.searchTopEnt1 {
+	font-size: 12px;
+}
+table.searchTopEntTable input[type="radio"] {
+	/*vertical-align: middle;*/
+}
+
+/*フキダシ*/
+div#fukidashi {
+    width: auto;
+    max-height: 200px;
+    max-width: 300px;
+}
+
+.fukidashi-list {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.fukidashi-name {
+    width: auto;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+}
+.fukidashi-name a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.fukidashi-name a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.fukidashi-name a:hover {
+	color: #f58344;
+	text-decoration: underline;
+}
+.fukidashi-name a:active {
+	color: #f58344;
+	text-decoration: underline;
+}
+.fukidashi-name img{
+	vertical-align: middle;
+}
+
+.fukidashi-data {
+    width: auto;
+	margin-left: 5px;
+	margin-bottom: 2px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+}
+
+#kyotenPrint {
+	position: absolute;
+	top: -34px;
+	right: 2px;
+	z-index: 99;
+}
+
+h2 {
+	width: 318px;
+	height: 21px;
+	font-weight: normal;
+	font-size: 14px;
+	padding-top: 2px;
+	padding-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	background: url(../images/hl.png) no-repeat left top;
+}
+
+.sectionDetailInner h3 {
+    background: rgba(0, 0, 0, 0) url("../images/bg_barTab.gif") no-repeat scroll 0 0;
+    border-bottom: 1px solid #ff6600;
+    line-height: 1.6;
+    margin-bottom: 13px;
+    padding-left: 13px;
+}
+h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: medium none;
+    border-collapse: collapse;
+    font-size: 100%;
+}
+
+.tableTypeA {
+    margin-bottom: 26px;
+    table-layout: fixed;
+    width: 796px;
+}
+.tableTypeA th, .tableTypeA td {
+    line-height: 20px;
+    padding: 5px;
+}
+.tableTypeA tbody th {
+    font-weight: normal;
+}
+.tableTypeA tbody th img{
+	margin-right: 4px;
+	vertical-align: middle;
+}
+.tableTypeA thead, .tableTypeA td {
+    text-align: center;
+}
+.tableTypeA thead {
+    color: #fff;
+}
+.tableTypeA tbody th {
+    text-align: left;
+}
+.tableTypeB {
+    margin-bottom: 13px;
+    width: 796px;
+}
+.tableTypeB th, .tableTypeB td {
+    font-weight: normal;
+    line-height: 20px;
+    min-height: 20px;
+}
+* html .tableTypeB th, * html .tableTypeB td {
+    height: 20px;
+}
+.tableTypeB th {
+    padding: 5px;
+    text-align: left;
+    width: 234px;
+}
+* html .tableTypeB th {
+    width: 244px;
+}
+.tableTypeB td {
+    text-align: center;
+    width: 30px;
+}
+.tableTypeC {
+    margin-bottom: 13px;
+    table-layout: fixed;
+    width: 796px;
+}
+.tableTypeC th {
+	font-weight: bold;
+}
+.tableTypeC th, .tableTypeC td {
+    line-height: 1.6;
+    padding: 5px;
+    vertical-align: top;
+}
+.tableTypeC dl {
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+.tableTypeC dt, .tableTypeC dd {
+    margin: 0;
+    padding: 0;
+}
+.tableTypeC dt {
+    float: left;
+}
+.tableTypeC dd {
+    background-color: #fff;
+    float: right;
+}
+.tableTypeC p {
+    margin: 0;
+}
+.tableTypeC span {
+    white-space: nowrap;
+}
+.tableTypeA tbody th span {
+    display: block;
+    min-height: 20px;
+}
+* html .tableTypeA tbody th span {
+    height: 20px;
+}
+
+#tab_news h3{border-bottom:1px solid #ff6600;background:url(../images/bg_barTab.gif) 0 0 no-repeat;}
+#tab_news table{border-right:1px solid #ff6600;border-bottom:1px solid #ff6600;}
+#tab_news table th,#tab_news table td{border-top:1px solid #ff6600;border-left:1px solid #ff6600;}
+#tab_news table.tableTypeA thead th{border-left:1px solid #fff;background-color:#ff6600;}
+#tab_news table.tableTypeA thead th.first{border-left:1px solid #ff6600;}
+
+#tab_post h3{border-bottom:1px solid #ff6600;background:url(../images/bg_barTab.gif) 0 0 no-repeat;}
+#tab_post table{border-right:1px solid #ff6600;border-bottom:1px solid #ff6600;}
+#tab_post table th,#tab_post table td{border-top:1px solid #ff6600;border-left:1px solid #ff6600;}
+#tab_post table.tableTypeA thead th{border-left:1px solid #fff;background-color:#ff6600;}
+#tab_post table.tableTypeA thead th.first{border-left:1px solid #ff6600;}
+
+#tab_window h3{border-bottom:1px solid #cc0000;background:url(../images/bg_barTabWindow.gif) 0 0 no-repeat;}
+#tab_window table{border-right:1px solid #cc0000;border-bottom:1px solid #cc0000;}
+#tab_window table th,#tab_window table td{border-top:1px solid #cc0000;border-left:1px solid #cc0000;}
+#tab_window table.tableTypeA thead th{border-left:1px solid #fff;background-color:#cc0000;}
+#tab_window table.tableTypeA thead th.first{border-left:1px solid #cc0000;}
+
+#tab_window_j h3{border-bottom:1px solid #cc0000;background:url(../images/bg_barTabWindow.gif) 0 0 no-repeat;}
+#tab_window_j table{border-right:1px solid #cc0000;border-bottom:1px solid #cc0000;}
+#tab_window_j table th,#tab_window_j table td{border-top:1px solid #cc0000;border-left:1px solid #cc0000;}
+#tab_window_j table.tableTypeA thead th{border-left:1px solid #fff;background-color:#cc0000;}
+#tab_window_j table.tableTypeA thead th.first{border-left:1px solid #cc0000;}
+
+#tab_window_o h3{border-bottom:1px solid #cc0000;background:url(../images/bg_barTabWindow.gif) 0 0 no-repeat;}
+#tab_window_o table{border-right:1px solid #cc0000;border-bottom:1px solid #cc0000;}
+#tab_window_o table th,#tab_window_o table td{border-top:1px solid #cc0000;border-left:1px solid #cc0000;}
+#tab_window_o table.tableTypeA thead th{border-left:1px solid #fff;background-color:#cc0000;}
+#tab_window_o table.tableTypeA thead th.first{border-left:1px solid #cc0000;}
+
+#tab_depositAndAtm h3{border-bottom:1px solid #009900;background:url(../images/bg_barTabAtm.gif) 0 0 no-repeat;}
+#tab_depositAndAtm table{border-right:1px solid #009900;border-bottom:1px solid #009900;}
+#tab_depositAndAtm table th,#tab_depositAndAtm table td{border-top:1px solid #009900;border-left:1px solid #009900;}
+#tab_depositAndAtm table.tableTypeA thead th{border-left:1px solid #fff;background-color:#009900;}
+#tab_depositAndAtm table.tableTypeA thead th.first{border-left:1px solid #009900;}
+
+#tab_atm h3{border-bottom:1px solid #009900;background:url(../images/bg_barTabAtm.gif) 0 0 no-repeat;}
+#tab_atm table{border-right:1px solid #009900;border-bottom:1px solid #009900;}
+#tab_atm table th,#tab_atm table td{border-top:1px solid #009900;border-left:1px solid #009900;}
+#tab_atm table.tableTypeA thead th{border-left:1px solid #fff;background-color:#009900;}
+#tab_atm table.tableTypeA thead th.first{border-left:1px solid #009900;}
+
+#tab_insurance h3{border-bottom:1px solid #0000cc;background:url(../images/bg_barTabInsurance.gif) 0 0 no-repeat;}
+#tab_insurance table{border-right:1px solid #0000cc;border-bottom:1px solid #0000cc;}
+#tab_insurance table th,#tab_insurance table td{border-top:1px solid #0000cc;border-left:1px solid #0000cc;}
+#tab_insurance table.tableTypeA thead th{border-left:1px solid #fff;background-color:#0000cc;}
+#tab_insurance table.tableTypeA thead th.first{border-left:1px solid #0000cc;}
+
+#slogan {
+    left: 331px;
+    position: absolute;
+    top: 32px;
+}
+
+table.printDtlTable td {
+	width: 50%;
+	vertical-align: top;
+}
+
+#printName {
+	padding-left: 0;
+}
+#printName img {
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-bottom: 2px;
+}
+
+#tab_time {
+    float: left;
+}
+#tab_time table {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-bottom: 1px;
+    table-layout: fixed;
+    width: 528px;
+}
+#tab_time table th, #tab_time table td {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    line-height: 20px;
+    padding: 5px;
+}
+#tab_time table td {
+	text-align: center;
+}
+#tab_time table th {
+    border-left: 1px solid #ccc;
+    font-weight: normal;
+}
+#tab_time table th.first {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-left: 1px solid #ccc;
+	text-align: center;
+}
+#tab_time table th img {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+.sectionDetailP{
+}
+#area_QR {
+    float: right;
+    line-height: 1.3;
+    margin-top: 0;
+}
+#area_QR img {
+    text-align: center;
+}
+#area_QR p {
+    float: right;
+    margin-top: 0;
+    text-align: center;
+}
+div#site-infoP ul.utility-link-list, div#site-infoP ul.group-link-list, div ul.utility-info {
+    margin: 0.6em 0 0;
+    padding: 0;
+    text-align: center;
+}
+div#site-infoP ul.utility-link-list li, div#site-infoP ul.group-link-list li, div ul.utility-info li {
+    border-left: 1px solid #e5e5e5;
+    display: inline;
+    font-size: 84%;
+    padding: 0 14px;
+}
+div#site-infoP ul.utility-link-list li.first-child, div#site-infoP ul.group-link-list li.first-child {
+    border-left: 0 none;
+    padding-left: 16px;
+}
+div#site-infoP ul.group-link-list {
+    background: #f5f5f5 none repeat scroll 0 0;
+    padding: 0.6em 0 0.7em;
+}
+div#site-infoP div.group-id {
+    height: 25px;
+    margin-top: 1px;
+    position: relative;
+}
+div#site-infoP div.copy-right {
+    border-top: 25px solid #ff6600;
+}
+div#site-infoP div.copy-right p {
+    left: 33px;
+    position: absolute;
+    top: 7px;
+}
+div#site-infoP div.copy-right address {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+div#site-infoP {
+    width: 635px;
+}
+div#site-infoP div.copy-right {
+    border-top: 25px solid #cc0000;
+}
+div#site-infoP div.copy-right p, div#site-info div.copy-right address {
+    top: 0;
+}
+div#site-infoP div.copy-right p {
+    left: 0;
+}
+
+
+/* append 20161028 */
+
+div#searchTopLeft{
+	width:600px;
+}
+
+div#searchTopRight{
+	width:320px;
+}
+
+div.searchTopSubTitleL,
+div.searchTopSubTitleR{
+	width:initial;
+	width:auto;
+}
+
+img#areaMapTopImg{
+    width: initial;
+	width: auto;
+    height: initial;
+    height: auto;
+    border:none;
+}
+
+div.searchTopGroup{
+	padding-bottom: 10px;
+}
+
+table.searchTopEntTable td.searchTopTypeNm{
+	padding-top:none;
+}
+
+#searchTopRosenzu{
+	padding-top:1em;
+}
+
+.checktab .tabBtn{
+    width: 99%;
+}
+
+.checktab > li:last-child .tabBtn{
+    width: 100%;
+}
+
+div#mainColumnRailways {
+    top: 0px;
+}
+
+/* google alert
+-------------------------------------------------- */
+.cust_gdlg_back {
+	position: absolute;
+	display: none;
+	overflow: visible;
+	top: 0;
+	left: 0;
+	min-height: 100% !important;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+.cust_gdlg_panel {
+	position: relative;
+	padding: 38px 8px 8px 8px;
+	margin: 170px auto;
+	border-radius: 5px;
+	width: 310px;
+	height: auto;
+	z-index: 100;
+	background-color: #ffffff;
+	text-align: center;
+	overflow-x: hidden;
+	font-size: 80%;
+}
+#cust_gdlg_close {
+	position: absolute;
+	displya: block;
+	width: 13px;
+	height: 13px;
+	right: 8px;
+	top: 8px;
+}
+.buttonGok {
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+.button-gok {
+  border: 1px solid #cc0000;
+  border-radius: 5px;
+  text-align: center;
+  padding: 6px 40px 6px 40px;
+}
+.button-gok:link {
+  color: #cc0000;
+  text-decoration: none;
+}
+.button-gok:visited {
+  color: #cc0000;
+}
+.button-gok:hover {
+  color: #fff;
+  background-color: #cc0000;
+  text-decoration: none;
+}
+
+/* 複合ルート実行中 */
+#combRouteProcessing {
+	z-index: 10110;
+	display: none;
+	position: absolute;
+	width: 121px;
+	height: 31px;
+	top: 20px;
+	left: 98px;
+}
+#combRouteProcessing-bgimg {
+	display:block;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+}
+#combRouteProcessing-animg {
+	display:block;
+	position:absolute;
+	top:4px;
+	left:4px;
+}
+#combRouteProcessing-text {
+	position: absolute;
+	top: 8px;
+	left: 24px;
+	font-size:10px;
+}

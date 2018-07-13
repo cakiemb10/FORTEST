@@ -1,0 +1,400 @@
+@charset "euc-jp";
+
+/* selectbox
+-------------------------------------------------- */
+.select-box select {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #a9a9a9;
+  background: #f3f3e7 url(../images/arrow01.png) right 50% no-repeat;
+  background-size: 30px, 100%;
+  font-size: 12px;
+  color: #626262;
+  overflow: hidden;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/* button
+-------------------------------------------------- */
+.button-layout1 {
+  text-align: center;
+  margin: 13px 0 16px 0;
+}
+.button-streetview {
+  border: 1px solid #cc0000;
+  border-radius: 5px;
+  text-align: center;
+  padding: 6px 63px 7px 63px;
+}
+.button-streetview:link {
+  color: #cc0000;
+  text-decoration: none;
+  background: url(../images/icon_streetview_r.png) 5px 50% no-repeat ,url(../images/icon_popup2.gif) 95% 50% no-repeat;
+}
+.button-streetview:visited {
+  color: #cc0000;
+}
+.button-streetview:hover {
+  color: #fff;
+  background: url(../images/icon_streetview_w.png) 5px 50% no-repeat ,url(../images/icon_popup2_w.gif) 95% 50% no-repeat;
+  background-color: #cc0000;
+  text-decoration: none;
+}
+
+
+
+/* placeholder
+-------------------------------------------------- */
+input.ph::-webkit-input-placeholder {
+  color: #898989;
+  font-size: 12px;
+  font-family: "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "£Í£Ó £Ð¥´¥·¥Ã¥¯", sans-serif;
+}
+input.ph:-ms-input-placeholder {
+  color: #898989;
+  font-size: 12px;
+  font-family: "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "£Í£Ó £Ð¥´¥·¥Ã¥¯", sans-serif;
+}
+input.ph::-moz-placeholder {
+  color: #898989;
+  font-size: 12px;
+  font-family: "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "£Í£Ó £Ð¥´¥·¥Ã¥¯", sans-serif;
+}
+
+/* route-list
+-------------------------------------------------- */
+ul.routeList a {
+  display: block;
+  padding: 1px 0;
+}
+ul.routeList a.select,
+ul.routeList a:hover {
+  background-color: #0000ee;
+  color: #fff;
+  text-decoration: none;
+}
+ul.routeList li a{
+  margin: 1px 0;
+  background-color: #fff;
+}
+ul.routeList li {
+  color: #fff;
+  margin: 1px 0;
+  background-color: #0000ee;
+}
+ul.routeList2 li a {
+  position: relative;
+  display: block;
+  padding: 6px 25px 6px 25px;
+  border-bottom: 1px solid #c9c99e;
+  text-decoration: none;
+  color: #333;
+}
+ul.routeList2 li a:hover {
+  background-color: #f3f3e7;
+}
+ul.routeList2 li a::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  border-top: 2px solid #c9c99e;
+  border-right: 2px solid #c9c99e;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.icon-start {
+  background: url(../images/icon_start.png) no-repeat 5px 50%;
+}
+.icon-arrow {
+  background: url(../images/icon_arrow.png) no-repeat 5px 50%;
+}
+.icon-goal {
+  background: url(../images/icon_goal.png) no-repeat 5px 50%;
+}
+ul.routeList3 li {
+  position: relative;
+  display: block;
+  padding: 6px 25px 6px 25px;
+  border-bottom: 1px solid #c9c99e;
+  text-decoration: none;
+  color: #333;
+}
+.icon-walk {
+  background: url(../images/icon_walk.png) no-repeat 0 0;
+  height: 16px
+}
+.icon-train {
+  background: url(../images/icon_train.png) no-repeat 0 0;
+  height: 16px
+}
+.icon-bus {
+  background: url(../images/icon_bus.png) no-repeat 0 0;
+  height: 16px
+}
+.icon-airplane {
+  background: url(../images/icon_airplane.png) no-repeat 0 0;
+  height: 16px
+}
+
+/* box
+-------------------------------------------------- */
+.routeBox {
+  position: relative;
+  width: 296px;
+  height: 268px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* tab
+-------------------------------------------------- */
+[class*="tab0"] ul > li a.current {
+  border-bottom: 1px solid #fff;
+  background-color: #fff;
+  pointer-events: none;
+}
+[class*="tab0"] ul {
+  display: table;
+  width: 316px;
+  table-layout: fixed;
+}
+[class*="tab0"] ul > li {
+  display: table-cell;
+  vertical-align: top;
+}
+[class*="tab0"] ul > li label,
+[class*="tab0"] ul > li a {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #e9eaf0;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+.tab01 ul > li a {
+  display: block;
+  line-height: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.tab01 ul > li a > span:first-child {
+  font-weight: bold;
+  font-size: 12px;
+}
+[class*="tab0"] ul > li + li label,
+[class*="tab0"] ul > li + li a {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.tab02 ul > li a {
+  display: table;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+}
+.tab02 ul > li a > span {
+  width: 100%;
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.tab02 ul > li a > span {
+  font-size: 10px;
+  font-weight: bold;
+}
+.tab02 + [class*="accordion-list0"] {
+  margin-top: 15px;
+}
+.routeIcon {
+  vertical-align: middle;
+}
+
+/* route-summary
+-------------------------------------------------- */
+.route-summary {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 5px 10px 10px 10px;
+  border: 1px solid #c9c99e;
+  background-color: #f3f3e7;
+  border-radius: 5px;
+}
+.route-summary  .dl01 {
+  line-height: 12px;
+}
+.dl01 dt:after {
+  display: inline-block;
+  margin-left: 8px;
+  content: ":"
+}
+.route-summary2 ul li a{
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 5px 10px 10px 10px;
+  border: 1px solid #c9c99e;
+  background: #f3f3e7 url(../images/arrow_down.png) 253px 50% no-repeat;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+}
+.route-summary2 ul li a:hover{
+  background-color: #f3f3e7;
+  border: 1px solid #c9c99e;
+}
+.route-summary2 ul li a.current {
+  border: 1px solid #c9c99e;
+  background: #f3f3e7 url(../images/arrow_up.png) 253px 50% no-repeat;
+}
+.route-summary2  .dl01 {
+  line-height: 12px;
+}
+.dl01 dt:after {
+  display: inline-block;
+  margin-left: 8px;
+  content: ":"
+}
+.rsIcon {
+  float:right
+  padding-left: 5px;
+}
+
+/* width
+-------------------------------------------------- */
+.w4em th,
+.w4em > dt {
+  width: 3.7em!important;
+  margin-top: 0.3em!important;
+}
+.w4em > dd {
+  margin-top: -1.0em!important;
+  margin-left: 3.7em!important;
+}
+
+/* ½ÄÃæ±û¤è¤»
+-------------------------------------------------- */
+[class*="accordion-list0"] [class*="route-list0"] > li:before,
+[class*="link-list"] li > [class*="icon"]:before,
+.arrow-list02 li > [class*="icon"]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* margin
+-------------------------------------------------- */
+.mt5 {
+  margin-top: 5px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.lh12 {
+  line-height: 12px;
+}
+
+/* padding
+-------------------------------------------------- */
+.ptb2 {
+  padding: 2px 0;
+}
+
+/* font
+-------------------------------------------------- */
+.fb {
+  font-weight: bold;
+}
+
+ul.tab03{
+  width: 802px;
+  height:31px;
+  margin:20px auto 0;
+  text-align: center;
+  color: #7D7D7D;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #c5c5c5;
+}
+ul.tab03 li {
+  width: 100px;
+  height: 27px;
+  float: left;
+  margin-right: 4px;
+  background: #e9eaf0;
+  line-height: 27px;
+  border-top: 4px solid #fff;
+  cursor: pointer;
+}
+ul.tab03 li.select {
+  width: 100px;
+  height: 30px;
+  float: left;
+  margin-right: 4px;
+  margin-bottom: -1px;
+  background: #fff;
+  line-height: 28px;
+  border-top: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  border-bottom: 1px solid #fff;
+  z-index: 999;
+  cursor: default;
+}
+.tab03_box{
+  border: 1px solid #c5c5c5;
+  border-top: none;
+}
+.tab03_box table#searchShopListData{
+  width: 780px;
+  margin: 10px auto;
+}
+.tab03_box #searchShopListPage td{
+  padding: 10px;
+}
+
+.walk-comment {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+ul.routeList3 li.bus-comment {
+  border-bottom: none;
+  padding: 6px;
+}

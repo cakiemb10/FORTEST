@@ -1,0 +1,78 @@
+@charset "euc-jp";
+
+/* body
+-------------------------------------------------- */
+#body {
+	text-align: center;
+}
+/* body直下のdiv
+-------------------------------------------------- */
+#wrapper {
+	overflow: hidden;
+	width: 930px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-left: 0px solid #FFFFFF;
+	border-right: 0px solid #FFFFFF;
+	border-top: 0px solid #FFFFFF;
+	border-bottom: 0px solid #FFFFFF;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+/* ヘッダ
+-------------------------------------------------- */
+#header {
+/*	display: ;*/
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+}
+/* メイン部分
+-------------------------------------------------- */
+#contents {
+	position: relative;
+	z-index: 2;
+	overflow: visible;
+	width: 100%;
+/*	height: ;*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	text-align: center;
+	vertical-align: top;
+}
+div.contents-withhis {
+	margin-top: 0px;
+}
+div.contents-nohis {
+	margin-top: 10px;
+}
+/* フッタ
+-------------------------------------------------- */
+#footer {
+/*	display: ;*/
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	padding: 0px;
+}

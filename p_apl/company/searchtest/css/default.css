@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: normal;
+}
+
+img {
+	border-style: none;
+}
+
+a,map {
+	outline: none; /* FireFoxでリンク時の枠線を消す */
+	line-height: normal;
+}
+
+div,form {
+	margin: 0px; 
+	padding: 0px;
+	line-height: normal;
+}
+
+th {
+	font-weight: normal;
+	line-height: normal;
+}
+td {
+	line-height: normal;
+}
+button {
+	line-height: normal;
+}

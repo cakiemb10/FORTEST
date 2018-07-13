@@ -1,0 +1,230 @@
+@charset "euc-jp";
+
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+button {
+  padding: 0;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  outline: 0;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 37px;
+  padding: 10px;
+  border: none;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: #f8f8f8;
+}
+
+input:not([value=""]),
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea {
+  background: #fff;
+}
+
+textarea {
+  height: auto;
+  min-height: 45px;
+  margin: 0;
+  padding: 8px 10px 10px 10px;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', Helvetica, Roboto, 'Droid Sans', arial, sans-serif;
+}
+
+form select + button,
+input[type="submit"] {
+  display: block;
+  height: 37px;
+  background-color: #cc0000;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+form select + button {
+  margin-top: -1px;
+}
+
+form select + button,
+[class*="searchbox0"] input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+}
+
+.main > [class*="searchbox0"] input[type="submit"] {
+  right: 10px;
+}
+
+.box-select,
+[class*="searchbox0"] input[type="tel"],
+[class*="searchbox0"] input[type="text"],
+[class*="searchbox0"] input[type="number"],
+[class*="searchbox0"] input[type="email"],
+[class*="searchbox0"] input[type="url"],
+[class*="searchbox0"] input[type="password"],
+[class*="searchbox0"] input[type="search"] {
+  padding-right: 60px;
+}
+
+::-webkit-input-placeholder {
+  color: #a9a9a9;
+}
+
+::-moz-placeholder {
+  color: #a9a9a9;
+}
+
+[class*="searchbox0"] {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.main > [class*="searchbox0"] {
+  width : 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  z-index: -9999px;
+}
+
+
+/* ラジオボタン */
+
+.no-link [class*="radiolist0"] {
+margin-bottom: 10px;
+}
+
+[class*="radiolist0"] li{
+  display: block;
+}
+
+[class*="radiolist0"] input[type="radio"] + label {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+[class*="radiolist0"] input[type="radio"] + label {
+  display: block;
+  padding: 5px 10px 5px 26px;
+}
+
+[class*="radiolist0"] input[type="radio"] + label:before,
+[class*="radiolist0"] input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -10px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.radiolist01 input[type="radio"] + label:before {
+  border: 2px solid #999;
+}
+
+[class*="radiolist0"] input[type="radio"]:checked + label:before {
+  border: 2px solid #cc0000;
+}
+
+[class*="radiolist0"] input[type="radio"]:checked + label:after {
+  top: 0;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  margin-top: 0;
+  background: #cc0000;
+}
+
+/* セレクトボックス */
+
+.box-select + select,
+.box-select {
+  display: block;
+  height: 37px;
+  position: relative;
+  border: 1px solid #e1e0e3;
+  border-radius: 5px;
+}
+
+.box-select select {
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding: 10px 60px 10px 10px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+.box-select select:focus {
+  background: #fff;
+}
+
+/* チェックボックス */
+.box-check {
+  display: block;
+  position: relative;
+}
+
+.box-check label {
+  display: block;
+  padding-left: 24px;
+  font-size: 1.5rem;
+}
+
+.box-check label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  background-position: 0 -80px;
+}
+
+.box-check input[type="checkbox"]:checked + label:before {
+  background-position: -20px -80px;
+}
+
+/* 縦中央よせ */
+[class*="radiolist0"] input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

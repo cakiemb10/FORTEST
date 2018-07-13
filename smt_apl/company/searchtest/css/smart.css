@@ -1,0 +1,814 @@
+@charset "euc-jp";
+/* CSS Document */
+
+body {
+	color:#252525;
+	background-color:#fff;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+a:hover, a:active {
+	color:#FF000;
+	text-decoration:none;
+}
+a:link, a:visited{
+	color:#252525;
+	text-decoration:none;
+}
+
+/* フッタ */
+.z_footer{
+	display:block;
+	padding: 40px 12px;
+	text-align:center;
+	font-size:80%;
+}
+.z_footer p{
+	margin: 0 0 12px 0;
+}
+.z_footer p a{
+	text-decoration:underline;
+}
+
+/* リスト行BOX */
+.z_litem a{
+	border-bottom: 1px solid #92b2dd;
+	font-size:120%;
+	display:table;
+	width:100%;
+	padding: 15px 0px;
+	vertical-align: middle;
+	word-break:break-all;
+}
+.z_litem a .z_litem_name{
+	display:table-cell;
+	margin-right:120px;
+	vertical-align:middle;
+	padding-left:12px;
+}
+.z_litem a .z_iconmiddle{
+	display:table-cell;
+	vertical-align:middle;
+}
+.z_litem a span.z_icon_arrow{
+	margin:auto;
+	float:right;
+	display:block;
+	width:34px;
+	height:35px;
+	background: url(../img/icon_arrow.png) no-repeat right center;
+}
+.z_litem a span.z_icon_map{
+	margin:auto;
+	float:right;
+	display:block;
+	width:34px;
+	height:35px;
+	background: url(../img/icon_map.png) no-repeat right center;
+}
+.z_litem a span.z_icon_phone{
+	margin:auto;
+	float:right;
+	display:block;
+	width:34px;
+	height:35px;
+	background: url(../img/icon_phone.png) no-repeat right center;
+}
+.z_litem a span.z_icon_mail{
+	margin:auto;
+	float:right;
+	display:block;
+	width:34px;
+	height:35px;
+	background: url(../img/icon_mail.png) no-repeat right center;
+}
+.z_litem a span.z_icon_web{
+	margin:auto;
+	float:right;
+	display:block;
+	width:34px;
+	height:35px;
+	background: url(../img/icon_web.png) no-repeat right center;
+}
+.z_litem a span.z_icon_blank{
+	margin:auto;
+	float:right;
+	display:block;
+	width:0px;
+	height:35px;
+}
+.z_litem_comment{
+	display:table-cell;
+	color: #5A5A5A;
+	font-size:80%;
+	vertical-align: middle;
+	padding-left:5px;
+}
+.z_litem_comment img{
+	margin-right:10px;
+}
+.z_litem_phone{
+	display:table-cell;
+	color: #5A5A5A;
+	font-size:100%;
+	color:#b90202;
+	font-weight:bold;
+	vertical-align: middle;
+	padding-left:5px;
+}
+.z_litem p{
+	display:table;
+	width:100%;
+	border-bottom: 1px solid #92b2dd;
+	padding: 15px 0px;
+	font-size:120%;
+	vertical-align: middle;
+	word-break:break-all;
+}
+.z_litem p span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.z_litem p .z_litem_name{
+	display:table-cell;
+	margin-right:120px;
+}
+.z_litem p .z_iconmiddle{
+	display:table-cell;
+	vertical-align:middle;
+}
+/* 「さらに読み込む」 */
+.z_litem_nextPage{
+	border-bottom: 1px solid #92b2dd;
+}
+.z_litem_nextPage a{
+	font-size:130%;
+	display:table;
+	width:96%;
+	padding: 17px 0px 17px 12px;
+	vertical-align: middle;
+	color:#00F;
+}
+.z_litem_nextPage p{
+	font-size:130%;
+	display:table;
+	width:96%;
+	padding: 17px 0px 17px 12px;
+	vertical-align: middle;
+	color:#999;
+}
+/* フリーワード */
+.z_litem_freeword{
+	width: 100%;
+	border-bottom: 1px solid #92b2dd;
+	padding:10px 0px 15px 0px;
+	margin-bottom: 0;
+}
+.z_litem_freeword_inner_top{
+	width:92%;
+	margin-right:auto;
+	margin-left:auto;
+}
+.z_litem_freeword_inner{
+	padding-right:12px;
+	padding-left:12px;
+}
+.z_freeword_div{
+	width:auto;
+	padding: 0 112px 0 0;
+}
+/* ClassName'freewordBox'は変更禁止 */
+.freewordBox{
+	width:100%;
+	font-size:120%;
+	color:#ccc;
+	display:table-cell;
+	margin: 0 -30px 0 0;
+	height: 19px;
+	margin: 2px 0 0 0;
+	padding: 6px 0 6px 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid darkGray;
+	-webkit-box-shadow: inset 0 3px 5px rgba(229, 229, 229, 1), 0 5px 0 rgba(255, 255, 255, 0), 0 -1px 0 rgba(229, 229, 229, 0);
+	-moz-box-shadow: inset 0 3px 5px rgba(229, 229, 229, 1), 0 5px 0 rgba(255, 255, 255, 0), 0 -1px 0 rgba(229, 229, 229, 0);
+	box-shadow: inset 0 3px 5px rgba(229, 229, 229, 1), 0 5px 0 rgba(255, 255, 255, 0), 0 -1px 0 rgba(229, 229, 229, 0);
+	vertical-align: middle;
+}
+/* ClassName'freewordBox-ent'は変更禁止 */
+.freewordBox-ent{
+	color: #000;
+}
+/* フリーワード検索ボタン */
+.z_freeword_btn_float{
+	float:right;
+	width:80px;
+	margin-right:0px;
+	height:40px;
+}
+.z_freeword_btn_div button{
+	display: block;
+	width: 80px;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding: 5px 0;
+	background: #7DC439;
+	border: 1px solid #71B52F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: white!important;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 196, 57, 1)), to(rgba(113, 181, 47, 1)), color-stop(50%, rgba(125, 196, 57, 1)), color-stop(50%, rgba(113, 181, 47, 1)));
+	background-image: -moz-linear-gradient(-90deg, #7DC439 0,#7DC439 50%,#71B52F 50%,#71B52F 100%);
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: -1px -1px
+}
+
+/* 検索TOP 「場所を指定」セクション */
+.z_top_pl{
+	font-size:100%;
+	display:table;
+	width:92%;
+	padding: 15px 0px 0px 0px;
+	vertical-align: middle;
+	margin: 0px auto;;
+}
+.z_top_pl .z_toggle{
+	display:block;
+	padding:10px;
+	text-align:left;
+	width:auto;
+	height:auto;
+	-moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius: 4px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(0.5, #f7f7f7),color-stop(0.5, #e6e6e6), to(#e6e6e6) );
+	border:1px solid #696969;
+	color:#333;
+	cursor:pointer;
+	text-shadow: 1px 2px 1px #fff;
+}
+.z_top_pl .z_toggle span{
+	margin:auto 0;
+}
+.z_top_pl .z_toggle_on{
+	display:block;
+	padding:10px;
+	text-align:left;
+	width:auto;
+	height:auto;
+	-moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow:0px 2px 10px rgba(0, 0, 0, 0.3) inset;
+	-webkit-box-shadow:0px 2px 7px #bbc4c5 inset;
+	background:#e9f4f5;
+	text-shadow: 1px 2px 1px #fff;
+	border:1px solid #696969;
+}
+
+/* 検索TOP 「絞り込み」セクション */
+.z_sb_cond {
+	margin-bottom: 5px;
+	height:24px;
+}
+.z_cond_panel_btn{
+	display:block;
+	padding:10px;
+	text-align:left;
+	width:auto;
+	height:auto;
+	-moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius: 4px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(0.5, #f7f7f7),color-stop(0.5, #e6e6e6), to(#e6e6e6) );
+	border:1px solid #696969;
+	color:#333;
+	cursor:pointer;
+	text-shadow: 1px 2px 1px #fff;
+}
+.z_cond_panel_btn span{
+	margin:auto 0;
+}
+.z_cond_panel_btn_on{
+	display:block;
+	padding:10px;
+	text-align:left;
+	width:auto;
+	height:auto;
+	-moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow:0px 2px 10px rgba(0, 0, 0, 0.3) inset;
+	-webkit-box-shadow:0px 2px 7px #bbc4c5 inset;
+	background:#e9f4f5;
+	text-shadow: 1px 2px 1px #fff;
+	border:1px solid #696969;
+}
+.z_cond_iconmiddle{
+	float:left;
+	display:block;
+	vertical-align:middle;
+	padding-right: 4px;
+}
+.z_icon_sld_close {
+	margin:auto;
+	float:left;
+	display:block;
+	width:18px;
+	height:18px;
+	background: url(../img/sld_close.png) no-repeat right center;
+}
+.z_icon_sld_open {
+	background: url(../img/sld_open.png) no-repeat right center;
+}
+.z_cond_panel_btn_icon_cache {
+	display: none;
+	background: url(../img/sld_open.png) no-repeat right center;/*cache*/
+}
+.z_cond_panel_btn_txt{
+	display:block;
+}
+.z_cond_panel {
+	display: none;
+	padding: 10px 10px 10px 10px;
+	width: 90%;
+	height: auto;
+}
+/* 絞り込み条件リストボックスタイトル */
+.z_cond_sel_title {
+	padding-bottom: 3px;
+	margin-bottom: 0;
+	font-size:80%;
+}
+
+/* 検索TOP 店舗リスト検索 セクション */
+.z_top_shoplist {
+	font-size:100%;
+	display:table;
+	width:92%;
+	padding: 15px 0px 0px 0px;
+	vertical-align: middle;
+	margin: 0px auto;
+}
+/* 検索TOP 店舗リスト検索ボタン */
+.z_top_btn_srch_shoplist {
+	border-bottom: 1px solid #92b2dd;
+}
+.z_top_btn_srch_shoplist button {
+	display: block;
+	width: 92%;
+	margin: 0 auto 25px auto;
+	padding: 5px 0;
+	background: #7DC439;
+	border: 1px solid #71B52F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: white!important;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 196, 57, 1)), to(rgba(113, 181, 47, 1)), color-stop(50%, rgba(125, 196, 57, 1)), color-stop(50%, rgba(113, 181, 47, 1)));
+	background-image: -moz-linear-gradient(-90deg, #7DC439 0,#7DC439 50%,#71B52F 50%,#71B52F 100%);
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: -1px -1px
+}
+
+/* 店舗詳細 項目タイトル */
+.z_inf_col_title {
+	width:100px;
+	display:table-cell;
+	vertical-align: middle;
+	color: #3D7500;
+	font-size:70%;
+	padding-left:12px;
+}
+
+/* 場所指定 フリーワード検索タイトル */
+.z_pl_fw_title {
+	width: auto;
+	padding-top: 8px;
+	padding-left:12px;
+	font-size:120%;
+}
+
+/* セレクトボックス */
+.z_sb1{
+	margin-top: 0;
+	width:100%;
+	height:40px;
+	font-size:100%;
+	display:table-cell;
+	text-align:left;
+	color:#333;
+	text-shadow: 1px 2px 1px #fff;
+}
+/* 絞り込み条件タイトル */
+.z_filter_title {
+	padding-bottom: 3px;
+	margin-bottom: 0;
+	font-size:80%;
+}
+
+/* フリーワード検索一覧 リスト表示領域 */
+.z_srch_fw_list {
+	postion:absolute;
+	top:0;
+	left:0;
+}
+
+/* 検索TOP 検索タイトル */
+.z_srch_title_pad{
+	width:92%;
+	padding: 5px 0px 0px 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.z_srch_title_div{
+	display:block;
+	padding:8px 0;
+	text-align:center;
+	background: #ebf4fd;
+	vertical-align:middle;
+	font-weight:bold;
+}
+.z_srch_title_div span{
+	display:block;	margin:auto;
+}
+
+/* キーワード表示 */
+.z_fw_keyword {
+	padding: 10px 12px;
+	font-size: 125%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_fw_keyword .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+}
+.z_fw_keyword li{
+	display:block;
+	margin-bottom: 10px;
+	vertical-align:middle;
+}
+.z_fw_keyword li img{
+	margin-right:10px;
+	vertical-align:bottom;
+}
+.z_fw_keyword li:last-child {
+	margin-bottom: 0;
+}
+.z_fw_keyword li .t-result {
+	color: #252525;
+}
+.z_fw_keyword li span{
+	color:#B90202;
+}
+
+/* 店舗リスト上位階層表示 */
+.z_sl_upper {
+	padding: 10px 12px;
+	font-size: 125%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_sl_upper .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+}
+.z_sl_upper li{
+	display:block;
+	margin-bottom: 10px;
+	vertical-align:middle;
+}
+.z_sl_upper li img{
+	margin-right:10px;
+	vertical-align:bottom;
+}
+.z_sl_upper li:last-child {
+	margin-bottom: 0;
+}
+.z_sl_upper li .t-result {
+	color: #252525;
+}
+.z_sl_upper li span{
+	color:#B90202;
+}
+
+/* 店舗詳細 店舗名 */
+.z_inf_name {
+	padding: 10px 12px;
+	font-size: 125%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_inf_name .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+}
+.z_inf_name li{
+	display:block;
+	margin-bottom: 10px;
+	vertical-align:middle;
+}
+.z_inf_name li img{
+	margin-right:10px;
+	vertical-align:bottom;
+}
+.z_inf_name li:last-child {
+	margin-bottom: 0;
+}
+.z_inf_name li .t-result {
+	color: #252525;
+}
+.z_inf_name li span{
+	color:#B90202;
+}
+
+/* 最寄り店舗一覧 件数表示、地図ボタン */
+.z_nlist_head {
+	padding: 10px 12px;
+	font-size: 125%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_nlist_head .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+}
+.z_nlist_head li{
+	display:block;
+	margin-bottom: 10px;
+	vertical-align:middle;
+}
+.z_nlist_head li img{
+	margin-right:10px;
+	vertical-align:bottom;
+}
+.z_nlist_head li:last-child {
+	margin-bottom: 0;
+}
+.z_nlist_head li .t-result {
+	color: #252525;
+}
+.z_nlist_head li span{
+	color:#B90202;
+}
+
+/* 最寄り店舗一覧 件数 */
+.z_nlist_count{
+	margin:auto 0;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+/* 最寄り店舗一覧 「地図で表示」 */
+.z_btn_map_a{
+	display:table-cell;
+	float: right;
+	padding:3px;
+	border: 2px solid #fff;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow:1px 1px 3px #444;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	vertical-align:middle;
+	font-size:80%;
+}
+.z_icon_japan{
+	display:inline-block;
+	margin-right:3px;
+	width:24px;
+	height:24px;
+	background:url(../img/label-japan.png) no-repeat;
+	vertical-align:middle;
+}
+
+/* フリーワード検索一覧 タブ */
+.z_fw_tab_div {
+	padding: 10px 0 0 0;
+}
+.z_fw_tab_div li {
+	display: table-cell;
+}
+.z_fw_tab_div li a{
+	display: table-cell;
+	width: 100px;
+	height: 60px;
+	font-size: 130%;
+	line-height: 1.25;
+	text-align: center;
+	vertical-align: middle;
+	cursor:pointer;
+	border-top: 1px solid #235eb0;
+	border-left: 1px solid #fcfbfb;
+	border-right: 1px solid #235eb0;
+	background: #a7c1e5;
+}
+/* ClassName'on'は変更禁止 */
+.z_fw_tab_div li a.on{
+	border-left: 1px solid #235eb0;
+	border-right: 1px solid #235eb0;
+	background: #235eb0;
+	color:#fff;
+}
+.z_fw_tab_div li a.off{
+	border-top: 1px solid #81692d;
+	border-left: 1px solid #fcfbfb;
+	border-right: 1px solid #81692d;
+	background: -moz-linear-gradient(#97CBE7, #5BB1E6);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e2d2a8), color-stop(0.1, #eee5cc), color-stop(0.9, #eee5cc), to(#e2d2a8));
+}
+.z_fw_tab_div li a span {
+	display: block;
+	font-size: 70%;
+}
+#z_fw_tab_ul{
+	border-bottom: 3px solid #235eb0;
+}
+
+/* 検索TOP 場所指定検索ボタン */
+.z_top_btn_srch_pl{
+	border-bottom: 1px solid #92b2dd;
+}
+.z_top_btn_srch_pl button{
+	display: block;
+	width: 92%;
+	margin: 0 auto 25px auto;
+	padding: 5px 0;
+	background: #7DC439;
+	border: 1px solid #71B52F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: white!important;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 196, 57, 1)), to(rgba(113, 181, 47, 1)), color-stop(50%, rgba(125, 196, 57, 1)), color-stop(50%, rgba(113, 181, 47, 1)));
+	background-image: -moz-linear-gradient(-90deg, #7DC439 0,#7DC439 50%,#71B52F 50%,#71B52F 100%);
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: -1px -1px
+}
+
+/* 検索TOP 下矢印 */
+.z_down_arrow{
+	display:block;
+	width:100%;
+	height:20px;
+	background: url(../img/icon_downarrow.png) no-repeat center;
+	padding:5px;
+}
+
+/* 場所指定 「現在地取得中」 */
+.z_pl_loc_msg{
+	display:table-cell;
+	color: #5A5A5A;
+	text-indent:3px;
+	font-size:70%;
+	vertical-align:middle;
+}
+
+/* 最寄り店舗一覧 メッセージ */
+.z_n_msg {
+	padding: 10px 12px;
+	font-size: 100%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_n_msg .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+
+}
+
+/* 現在地取得I/F画面 */
+/* 「現在地取得中」 */
+.z_loc{
+	padding: 20px 12px;
+	font-size: 125%;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_loc .fl{
+	display:table;
+	width:100%;
+	text-align: center;
+	vertical-align:middle;
+}
+.z_loc_msg{
+	margin:auto 0;
+	display:table-cell;
+	text-align: center;
+	vertical-align:middle;
+}
+
+/* 最寄施設ジャンル */
+.z_jnr_panel {
+	padding: 15px 15px;
+	width: 90%;
+	height: auto;
+	border-bottom: 1px solid #bcbcbc;
+	font-size: 90%;
+}
+.z_jnr_panel li {
+	padding-top: 1px;;
+	padding-bottom: 1px;;
+	vertical-align: middle;
+}
+.z_jnr_panel li input {
+	margin-top: 0;
+}
+.z_jnr_panel li img {
+	margin-right: 2px;
+	margin-bottom: 0;
+}
+.z_jnr_panel_exp {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+/* 再検索ボタン */
+.z_jnr_btn_srch_pl button{
+	display: block;
+	width: 92%;
+	margin: 0 auto 25px auto;
+	padding: 5px 0;
+	background: #7DC439;
+	border: 1px solid #71B52F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: white!important;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 196, 57, 1)), to(rgba(113, 181, 47, 1)), color-stop(50%, rgba(125, 196, 57, 1)), color-stop(50%, rgba(113, 181, 47, 1)));
+	background-image: -moz-linear-gradient(-90deg, #7DC439 0,#7DC439 50%,#71B52F 50%,#71B52F 100%);
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: -1px -1px
+}
+
+/* 路線リスト */
+.z_rosen_head {
+	padding: 10px 12px;
+	font-size: 125%;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #92b2dd;
+}
+.z_rosen_head .fl{
+	display:table;
+	width:100%;
+	vertical-align:middle;
+}
+
+
+/* エラー画面 メッセージ */
+.z_error_msg {
+	padding:10px 12px 40px 12px;
+}
+
+/* フォントスタイル */
+.font-1{font-size:170%;}
+.font-2{font-size:140%;}
+.font-3{font-size:130%;}
+.font-4{font-size:110%;}
+.font-5{font-size:105%;}
+.font-6{font-size:90%;}
+.font-7{font-size:80%;}
+.font-8{font-size:75%;}
+.font-9{font-size:60%;}
+
+.font-bold{font-weight:bold;}
+
+.font-grey{color: #5A5A5A;!important;}
+.font-black{color: #252525;!important;}
+.font-green{color: #3D7500;!important;}
+.font-red{color: #b90202;!important;}
+
+.no-border{border: 0px;}
+
+/*マージン*/
+.mL10{margin-left:10px!important;}
+.mL15{margin-left:15px!important;}
+.mL20{margin-left:20px!important;}
+.mL50{margin-left:50px!important;}
+.mB00{margin-bottom:0!important;}
+.mB05{margin-bottom:0.5em!important;}
+.mB08{margin-bottom:0.8em!important;}
+.mB10{margin-bottom:1.0em!important;}
+.mB15{margin-bottom:1.5em!important;}
+.mB20{margin-bottom:2.0em!important;}
+.mb15{margin-bottom:1.5em!important;}
+.mR02{margin-right:2px!important;}
+.mR05{margin-right:5px!important;}
+.mR00{margin-right:0px!important;}
+
+.floatR{float:right;}
+

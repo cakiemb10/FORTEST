@@ -1,0 +1,2421 @@
+@charset "euc-jp";
+
+/* BODY
+-------------------------------------------------- */
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #F4F0E7;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* リンク
+-------------------------------------------------- */
+a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+
+/* 遷移履歴（パンくず）
+-------------------------------------------------- */
+#history {
+	overflow: hidden;
+	/*width: 930px;*/
+	/*width: 100%;*/
+	width: 930px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 0px solid #BC8F8F;
+	border-right: 0px solid #BC8F8F;
+	border-top: 0px solid #BC8F8F;
+	border-bottom: 0px solid #BC8F8F;
+	background-color: #FCFDFE;
+	font-size: 12px;
+	color: #7D7D7D;
+	text-align: left;
+	vertical-align: middle;
+}
+#history a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#history a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#history a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#history a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 左エリア
+-------------------------------------------------- */
+#leftArea {
+	float: left;
+	width: 592px;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+/* 右エリア
+-------------------------------------------------- */
+#rightArea {
+	float: right;
+	width: 338px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+/* 地図
+-------------------------------------------------- */
+#ZdcEmapMap {
+	position: relative;
+	overflow: hidden;
+	z-index: 40;
+	width: 590px;
+	height: 450px;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+}
+/* 地図閲覧規約リンク
+-------------------------------------------------- */
+#mapRuleLink {
+	width: 592px;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 9px;
+	padding: 0px;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+#mapRuleLink a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#mapRuleLink a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#mapRuleLink a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#mapRuleLink a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 拠点絞り込み／施設ジャンル絞り込み
+-------------------------------------------------- */
+#ZdcEmapCond {
+	position: relative;
+	z-index: 30;
+	width: 592px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/* 拠点絞り込み
+-------------------------------------------------- */
+#condFrame {
+	width: 592px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left: 0px solid #E6E6E6;
+	border-right: 0px solid #E6E6E6;
+	border-top: 0px solid #E6E6E6;
+	border-bottom: 0px solid #E6E6E6;
+}
+#condTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+#condTable th {
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 11px;
+	padding-bottom: 4px;
+	border-bottom: 0px solid #E6E6E6;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}
+/* フラグ項目 */
+#condTable td.condFlgTd {
+	width: 100%;
+	background-color: #F2F4F5;
+	text-align: left;
+	vertical-align: middle;
+}
+.condFlgInnerTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+.condFlgInnerTable td {
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+}
+.condFlgInnerTable td.condCbTd {
+	width: 1%;
+	padding-left: 15px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 9px;
+	text-align: center;
+}
+.condFlgInnerTable td.condImgTd {
+	width: 1%;
+	padding-left: 0px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 9px;
+	text-align: center;
+}
+.condFlgInnerTable td.condTxtTd {
+	padding-left: 0px;
+	padding-right: 9px;
+	padding-top: 0px;
+	padding-bottom: 9px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+.condFlgInnerTable img {
+	vertical-align: middle;
+}
+/* リスト項目 */
+#condTable td.condKbnKeiT {
+	border-top: 0px solid #E6E6E6;
+	background-color: #F2F4F5;
+	font-size: 0px;
+}
+#condTable td.condKbnTd {
+	background-color: #F2F4F5;
+	text-align: left;
+	vertical-align: middle;
+}
+.condKbnInnerTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+.condKbnInnerTable td {
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+}
+/*
+.condKbnInnerTable td.condKbnNmTd {
+	width: 90px;
+	padding-left: 15px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+.condKbnInnerTable td.condKbnListTd {
+	padding-left: 0px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+}
+*/
+.condKbnInnerTable td.condLbTd {
+	width: 100%;
+	padding-left: 9px;
+	padding-bottom: 4px;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+/* 施設ジャンル絞り込み
+-------------------------------------------------- */
+#jnrFrame {
+	width: 592px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left: 0px solid #E6E6E6;
+	border-right: 0px solid #E6E6E6;
+	border-top: 0px solid #E6E6E6;
+	border-bottom: 0px solid #E6E6E6;
+}
+#jnrTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+#jnrTable th {
+	padding: 4px;
+	border-bottom: 0px solid #E6E6E6;
+	background-color: #F2F4F5;
+}
+#jnrTable th.jnrExp {
+	padding-left: 9px;
+	padding-right: 0px;
+	padding-top: 11px;
+	padding-bottom: 4px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}
+#jnrTable th.jnrSearch {
+	padding-left: 0px;
+	padding-right: 9px;
+	padding-top: 11px;
+	padding-bottom: 4px;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#jnrTable th.jnrSearch img {
+	vertical-align: middle;
+}
+#jnrTable th.jnrSearch a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#jnrTable th.jnrSearch a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#jnrTable th.jnrSearch a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#jnrTable th.jnrSearch a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#jnrTable td.jnrTd {
+	width: 33%;
+	background-color: #F2F4F5;
+	text-align: left;
+	vertical-align: middle;
+}
+.jnrInnerTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+.jnrInnerTable td {
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+}
+.jnrInnerTable td.jnrCbTd {
+	width: 1%;
+	padding-left: 15px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 6px;
+	text-align: center;
+}
+.jnrInnerTable td.jnrImgTd {
+	padding-left: 0px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 6px;
+	width: 1%;
+	text-align: center;
+}
+.jnrInnerTable td.jnrTxtTd {
+	padding-left: 0px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 6px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+.jnrInnerTable img {
+	vertical-align: middle;
+}
+/* 拠点詳細
+-------------------------------------------------- */
+#ZdcEmapDetail {
+	position: relative;
+	z-index: 10;
+	font-size: 0px;/* ※【IE】拠点詳細非表示の際、ZdcEmapDetailのheightが１文字分確保されてしまい、拠点一覧がその分下へズレてしまう為、この指定が必要です。 */
+}
+/* タイトル（拠点名） */
+#kyotenHd {
+	width: 310px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border-left: 0px solid #292B2F;
+	border-right: 0px solid #292B2F;
+	border-top: 0px solid #292B2F;
+	border-bottom: 0px solid #292B2F;
+	border-collapse: collapse;
+	background-color: #3A3C42;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+#kyotenHd a:link {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#kyotenHd a:visited {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#kyotenHd a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#kyotenHd a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 詳細 */
+#kyotenDtl {
+	width: 328px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-left: 0px solid #292B2F;
+	border-right: 0px solid #292B2F;
+	border-top: 0px solid #292B2F;
+	border-bottom: 0px solid #292B2F;
+	background-color: #FFFFFF;
+}
+#kyotenDtlTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* 詳細：拠点画像 */
+#kyotenDtlTable td.kyotenDtlImgTd {
+	text-align: center;
+}
+#kyotenDtlImg {
+	border: 1px solid #667777;
+}
+.kyotenDtlImgMulti {
+	text-align: center;
+	border: 1px solid #667777;
+}
+/* 詳細：項目名 */
+#kyotenDtlTable th {
+	width: 120px;
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 8px;
+/*	padding-bottom: ;*/
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* 詳細：データ */
+#kyotenDtlTable td {
+	padding-left: 5px;
+	padding-right: 9px;
+	padding-top: 8px;
+/*	padding-bottom: ;*/
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	font-size: 12px;
+	word-break: break-all;
+}
+/* 詳細：データ（リンク） */
+.kyotenDtlData a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.kyotenDtlData a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.kyotenDtlData a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+.kyotenDtlData a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 詳細：携帯URL */
+#kyotenDtlMobileUrl {
+	width: 183px;
+}
+/* 詳細：携帯へ送信リンク */
+.kyotenDtlMobileLink {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 1px 0px 1px 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+.kyotenDtlMobileLink a:link {
+	color: #0000EE;
+	text-decoration: underline;
+	vertical-align: bottom;
+}
+.kyotenDtlMobileLink a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+	vertical-align: bottom;
+}
+.kyotenDtlMobileLink a:hover {
+	color: #F58344;
+	text-decoration: underline;
+	vertical-align: bottom;
+}
+.kyotenDtlMobileLink a:active {
+	color: #F58344;
+	text-decoration: underline;
+	vertical-align: bottom;
+}
+/* 詳細：携帯へ送信アイコン */
+#kyotenDtlMLinkIcon {
+/*	display: ;*/
+	border: 0px solid #666666;
+	vertical-align: top;
+}
+/* 詳細：二次元バーコード */
+.kyotenDtlQR {
+	border: 0px solid #666666;
+}
+/* 詳細：操作リンク */
+#kyotenDtlTable td.kyotenDtlFunc {
+/*	padding-top: ;*/
+/*	padding-bottom: ;*/
+	border-top: 0px solid #292B2F;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+}
+#kyotenDtlTable td.kyotenDtlFunc a {
+	font-size: 12px;
+	font-weight: bold;
+}
+#kyotenDtlTable td.kyotenDtlFunc a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#kyotenDtlTable td.kyotenDtlFunc a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#kyotenDtlTable td.kyotenDtlFunc a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#kyotenDtlTable td.kyotenDtlFunc a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#kyotenDtlTable td.kyotenDtlFunc img {
+	vertical-align: middle;
+}
+/* 詳細：操作リンクアイコン */
+.kyotenDtlFuncIcon {
+/*	display: ;*/
+	border: 2px solid #E1E2E3;
+}
+/* 最寄り拠点一覧
+-------------------------------------------------- */
+/* 全体 */
+#kyotenList {
+	position: relative;
+	width: 328px;
+	height: auto;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border-left: 0px solid #FFC266;
+	border-right: 0px solid #FFC266;
+	border-top: 0px solid #FFC266;
+	border-bottom: 0px solid #FFC266;
+}
+/* safari only \*/
+html:\66irst-child #kyotenList {
+	border-bottom: 0px solid #FFC266;
+}
+/* end */
+/* リスト */
+#kyotenListHd {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 3px solid #CC0000;
+	background-color: #CC0000;
+}
+#kyotenListHeader {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+#kyotenListHeader td.kyotenListTitle {
+	padding-left: 9px;
+	padding-right: 0px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+#kyotenListHeader td.kyotenListPage {
+	padding-left: 2px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#kyotenListHeader td.kyotenListPage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#kyotenListHeader td.kyotenListPage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#kyotenListHeader td.kyotenListPage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#kyotenListHeader td.kyotenListPage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#kyotenListDt {
+	width: 100%;
+	margin: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background-color: #F2F4F5;
+}
+#kyotenListTable {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+#kyotenListTable td {
+	border-bottom: 2px solid #EAECED;
+}
+.kyotenListName {
+	overflow: right;
+	padding-left: 16px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 4px;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+.kyotenListName a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.kyotenListName a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.kyotenListName a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+.kyotenListName a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+.kyotenListData {
+	overflow: right;
+	padding-left: 25px;
+	padding-right: 9px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}
+#kyotenListErrMsg {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #EAECED;
+	background-color: #F2F4F5;
+	color: #000000;
+/*	font-size: ;*/
+/*	font-weight: ;*/
+	text-align: center;
+	vertical-align: middle;
+}
+/* safari only \*/
+html:\66irst-child #kyotenListErrMsg {
+	border-bottom: 0px;
+}
+/* end */
+.kyotenListPrintLink {
+	width: 328px;
+	padding: 2px 0 0 0;
+	border: 0;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+/* 最寄り駅一覧
+-------------------------------------------------- */
+/* 全体 */
+#nekiList {
+	position: relative;
+	width: 328px;
+	height: auto;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border-left: 0px solid #FFC266;
+	border-right: 0px solid #FFC266;
+	border-top: 0px solid #FFC266;
+	border-bottom: 0px solid #FFC266;
+}
+/* safari only \*/
+html:\66irst-child #nekiList {
+	border-bottom: 0px solid #FFC266;
+}
+/* end */
+/* リスト */
+#nekiListHd {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 3px solid #CC0000;
+	background-color: #CC0000;
+}
+#nekiListHeader {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+#nekiListHeader td.nekiListTitle {
+	padding-left: 9px;
+	padding-right: 0px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+#nekiListHeader td.nekiListPage {
+	padding-left: 2px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#nekiListHeader td.nekiListPage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListHeader td.nekiListPage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListHeader td.nekiListPage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListHeader td.nekiListPage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListDt {
+	width: 100%;
+	margin: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background-color: #F2F4F5;
+}
+#nekiListTable {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+#nekiListTable td {
+	border-bottom: 2px solid #EAECED;
+}
+#nekiListTable td.nekiListName {
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+#nekiListTable td.nekiListName a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListName a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListName a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListName a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListRoute {
+	padding-left: 0px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+#nekiListTable td.nekiListRoute a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListRoute a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListRoute a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListTable td.nekiListRoute a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#nekiListErrMsg {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #EAECED;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+}
+/* 最寄り施設一覧
+-------------------------------------------------- */
+/* 全体 */
+#npoiList {
+	position: relative;
+	width: 328px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border-left: 0px solid #FFC266;
+	border-right: 0px solid #FFC266;
+	border-top: 0px solid #FFC266;
+	border-bottom: 0px solid #FFC266;
+}
+/* safari only \*/
+html:\66irst-child #npoiList {
+	border-bottom: 0px solid #FFC266;
+}
+/* end */
+/* リスト */
+#npoiListHd {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 3px solid #CC0000;
+	background-color: #CC0000;
+}
+#npoiListHeader {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+#npoiListHeader td.npoiListTitle {
+	padding-left: 9px;
+	padding-right: 0px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+#npoiListHeader td.npoiListPage {
+	padding-left: 2px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#npoiListHeader td.npoiListPage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#npoiListHeader td.npoiListPage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#npoiListHeader td.npoiListPage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#npoiListHeader td.npoiListPage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+#npoiListDt {
+	width: 100%;
+	margin: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background-color: #F2F4F5;
+}
+table.npoiListTableOut {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.npoiListTableOut td {
+	border-bottom: 2px solid #EAECED;
+}
+table.npoiListTable img {
+	vertical-align: middle;
+}
+table.npoiListTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.npoiListTable td {
+	border-bottom: 0px;
+}
+table.npoiListTable td.npoiListName {
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 9px;
+	padding-bottom: 2px;
+	border-bottom: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+table.npoiListTable td.npoiListName a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+table.npoiListTable td.npoiListName a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+table.npoiListTable td.npoiListName a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+table.npoiListTable td.npoiListName a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+table.npoiListTable td.npoiListDist {
+	/*width: 15%;*/
+	padding-left: 0px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 2px;
+	border-bottom: 0px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+table.npoiListTable td.npoiListDtl {
+	margin: 0px;
+	padding-left: 21px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-bottom: 0px;
+	text-align: left;
+}
+.npoiAddrTable {
+	width: 100%;
+	border: 0px;
+}
+.npoiAddrTable td {
+	border-bottom: 0px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #7D7D7D;
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+}
+#npoiListDistExp {
+	width: 328px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+}
+#npoiListErrMsg {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #EAECED;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+}
+/* 出発地を指定してルート探索
+-------------------------------------------------- */
+/* 全体 */
+#freeRoute {
+	position: relative;
+	width: 328px;
+	height: auto;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border-left: 0px solid #FFC266;
+	border-right: 0px solid #FFC266;
+	border-top: 0px solid #FFC266;
+	border-bottom: 0px solid #FFC266;
+	background-color: #F2F4F5;
+}
+/* safari only \*/
+html:\66irst-child #freeRoute {
+/*	border-bottom:  solid #FFC266;*/
+}
+/* ルート表示リンク */
+#freeRouteAction {
+	width: 100%;
+	padding: 10px 0px 20px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+/* 検索 */
+#freeRouteSearch {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+}
+.freeRouteSearchTitle {
+	padding: 0px 0px 0 25px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+.freeRouteSearchEnt {
+	padding: 2px 0px 0 25px;
+	text-align: left;
+}
+#freeRouteSearchEntText {
+	width: 243px;
+}
+.freeRouteSearchGuide {
+	padding: 2px 0px 10px 25px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}
+#freeRouteErrMsg {
+	width: 100%;
+	padding-bottom: 4px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+#freeRouteSearchList {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+}
+#freeRouteSearchList td {
+	border: 0;
+	padding: 2px 0px 2px 25px;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+#freeRouteSearchListPage {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+}
+#freeRouteSearchListPage td {
+	border: 0;
+	padding: 4px 0px 4px 25px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+#ZdcEmapRouteDistance {
+	margin-top: 4px;
+	margin-bottom: 0;
+	padding: 0;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* e-map standard 制御コード --------------------------------------------------*/
+/* 最寄り拠点一覧 */
+#ZdcEmapList {
+	position: relative;
+	z-index: 20;
+}
+/* 検索ウィンドウ */
+#ZdcEmapSearchWindow {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 9999px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	text-align: center;
+	z-index: 50;
+}
+/* ※【IE6】リストボックスがdivの上に来てしまう不具合に対応する為、ZdcEmapSearchWindowの下にiframeを置く */
+#ZdcEmapIE6HideSelect {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 9999px;
+	visibility: hidden;
+	background-color: transparent;
+	z-index: 49;
+}
+/* 路線図（メイン） */
+#ZdcEmapSearchRailwayMain {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 50;
+	text-align: left;
+}
+/* 路線図（サブ） */
+#ZdcEmapSearchRailwaySub {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 50;
+}
+/* 地域図 */
+#ZdcEmapSearchArea {
+	position: relative;
+	overflow: visible;
+	margin-left:auto; 
+	margin-right:auto;
+	top: 0px;
+	left: 0px;
+	z-index: 50;
+	border: #bfbfbf 1px solid;
+}
+
+/* 吹き出し
+-------------------------------------------------- */
+div#fukidashi {
+	height: auto;
+	width: 195px;
+	z-index: 300;
+	overflow: auto;
+}
+/* 拠点名 */
+#fukidashi-name {
+	/*width: 190px;*/
+	width: 175px;
+	/*margin-bottom: 10px;*/
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+}
+#fukidashi-name a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#fukidashi-name a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#fukidashi-name a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#fukidashi-name a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 明細 */
+#fukidashi-data {
+	width: 170px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+}
+
+/* 検索TOP
+-------------------------------------------------- */
+/* 全体 */
+#searchTopWrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 0px;
+}
+/* タイトル */
+div#searchTopTitle {
+/*	display: ;*/
+	width: 912px;
+	margin: 0px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border-left: 0px solid #292B2F;
+	border-right: 0px solid #292B2F;
+	border-top: 0px solid #292B2F;
+	border-bottom: 0px solid #292B2F;
+	background-color: #3A3C42;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+/* 全体 */
+#searchTop {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	padding: 0px;
+	border: 0px;
+	vertical-align: top;
+}
+/* 左 */
+div#searchTopLeft {
+	float: left;
+	width: 357px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	padding: 0px;
+	border: 0px;
+	vertical-align: top;
+}
+/* 右 */
+div#searchTopRight {
+	float: right;
+	width: 563px;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	padding: 0px;
+	border: 0px;
+	vertical-align: top;
+}
+/* 検索グループ */
+div.searchTopGroup {
+	margin: 0px;
+	padding-top: 10px;
+}
+/* フリーワード入力テキストボックス */
+input.searchFW {
+	width: 200px;
+}
+/* IE6 only */
+_input.searchFW {
+	margin-right: 4px;
+}
+/* IE7 only */
+*input.searchFW {
+	margin-right: 4px;
+}
+/* safari only \*/
+html:\66irst-child input.searchFW {
+	margin-right: 0px;
+}
+/* 都道府県リスト */
+/* IE6 only */
+_select.searchTodSelect {
+	margin-right: 4px;
+}
+/* IE7 only */
+*select.searchTodSelect {
+	margin-right: 4px;
+}
+/* safari only \*/
+html:\66irst-child select.searchTodSelect {
+	margin-right: 0px;
+}
+/* 「検索」ボタン */
+button.searchButton {
+	width: 90px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-left: 1px solid #E1E6EB;
+	border-right: 1px solid #CCCCD7;
+	border-top: 1px solid #E1E6EB;
+	border-bottom: 1px solid #CCCCD7;
+	background-color: #E9EAF0;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+}
+/* 「リスト表示」ボタン */
+button.searchListButton {
+	width: 100px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-left: 1px solid #E1E6EB;
+	border-right: 1px solid #CCCCD7;
+	border-top: 1px solid #E1E6EB;
+	border-bottom: 1px solid #CCCCD7;
+	background-color: #E9EAF0;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+}
+/* 検索グループタイトル（左） */
+div.searchTopSubTitleL {
+	width: 339px;
+	margin: 0px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left: 0px solid #CC0000;
+	border-right: 0px solid #CC0000;
+	border-top: 0px solid #CC0000;
+	border-bottom: 0px solid #CC0000;
+	color: #FFFFFF;
+	background-color: #CC0000;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+/* 検索グループタイトル（右） */
+div.searchTopSubTitleR {
+	width: 545px;
+	margin: 0px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left: 0px solid #CC0000;
+	border-right: 0px solid #CC0000;
+	border-top: 0px solid #CC0000;
+	border-bottom: 0px solid #CC0000;
+	color: #FFFFFF;
+	background-color: #CC0000;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+/* 検索入力エリア */
+table.searchTopEntTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* 検索入力（フリーワード入力） */
+table.searchTopEntTable td.searchTopEnt1 {
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	text-align: left;
+	vertical-align: bottom;
+	text-align: left;
+}
+/* 検索種類名 */
+table.searchTopEntTable td.searchTopTypeNm {
+	width: 110px;
+	height: auto;
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+/* 検索入力（選択） */
+table.searchTopEntTable td.searchTopEnt2 {
+	height: auto;
+	padding-left: 2px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+	vertical-align: bottom;
+	text-align: left;
+}
+/* 路線図リンク */
+#searchTopRosenzu {
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: bottom;
+}
+#searchTopRosenzu a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchTopRosenzu a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchTopRosenzu a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchTopRosenzu a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* フリーワード入力例 */
+.searchTopEx {
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+/* 地域図 */
+img#areaMapTopImg {
+	width: 355px;
+	height: 304px;
+	margin-top: 5px;
+	border: 1px solid #CCCCD7;
+}
+/* 地域図 ポップアップ(北海道) */
+div#mapLargeHokaido {
+	width: 176px;
+	height: 144px;
+	position: absolute;
+	top: 75px;
+	left: 200px;
+	z-index: 300;
+	visibility: hidden;
+}
+div#mapLargeHokaido img {
+	background:url(../images/a1_area_map_dtl_hokkaido.png) no-repeat;
+	width:176px;
+	height:144px;
+}
+* html div#mapLargeHokaido img {
+	background-image: url(../images/a1_area_map_dtl_hokkaido.gif);
+}
+
+/* 地域図 ポップアップ(東北) */
+div#mapLargeTohoku {
+	width: 123px;
+	height: 181px;
+	position: absolute;
+	top: 80px;
+	left: 220px;
+	z-index: 310;
+	visibility: hidden;
+}
+div#mapLargeTohoku img {
+	background:url(../images/a1_area_map_dtl_tohoku.png) no-repeat;
+	width: 123px;
+	height: 181px;
+}
+* html div#mapLargeTohoku img {
+	background-image: url(../images/a1_area_map_dtl_tohoku.gif);
+}
+/* 地域図 ポップアップ(関東) */
+div#mapLargeKanto {
+	width: 123px;
+	height: 137px;
+	position: absolute;
+	top: 250px;
+	left: 240px;
+	z-index: 320;
+	visibility: hidden;
+}
+div#mapLargeKanto img {
+	background:url(../images/a1_area_map_dtl_kanto.png) no-repeat;
+	width: 123px;
+	height: 137px;
+}
+* html div#mapLargeKanto img {
+	background-image: url(../images/a1_area_map_dtl_kanto.gif);
+}
+/* 地域図 ポップアップ(中部) */
+div#mapLargeChubu {
+	width: 175px;
+	height: 192px;
+	position: absolute;
+	top: 200px;
+	left: 140px;
+	z-index: 330;
+	visibility: hidden;
+}
+div#mapLargeChubu img {
+	background:url(../images/a1_area_map_dtl_chubu.png) no-repeat;
+	width: 175px;
+	height: 192px;
+}
+* html div#mapLargeChubu img {
+	background-image: url(../images/a1_area_map_dtl_chubu.gif);
+}
+/* 地域図 ポップアップ(近畿) */
+div#mapLargeKinki {
+	width: 132px;
+	height: 129px;
+	position: absolute;
+	top: 260px;
+	left: 140px;
+	z-index: 340;
+	visibility: hidden;
+}
+div#mapLargeKinki img {
+	background:url(../images/a1_area_map_dtl_kinki.png) no-repeat;
+	width: 132px;
+	height: 129px;
+}
+* html div#mapLargeKinki img {
+	background-image: url(../images/a1_area_map_dtl_kinki.gif);
+}
+/* 地域図 ポップアップ(中国) */
+div#mapLargeChugoku {
+	width: 123px;
+	height: 84px;
+	position: absolute;
+	top: 230px;
+	left: 90px;
+	z-index: 350;
+	visibility: hidden;
+}
+div#mapLargeChugoku img {
+	background:url(../images/a1_area_map_dtl_chugoku.png) no-repeat;
+	width: 123px;
+	height: 84px;
+}
+* html div#mapLargeChugoku img {
+	background-image: url(../images/a1_area_map_dtl_chugoku.gif);
+}
+/* 地域図 ポップアップ(四国) */
+div#mapLargeShikoku {
+	width: 130px;
+	height: 79px;
+	position: absolute;
+	top: 300px;
+	left: 90px;
+	z-index: 360;
+	visibility: hidden;
+}
+div#mapLargeShikoku img {
+	background:url(../images/a1_area_map_dtl_shikoku.png) no-repeat;
+	width: 130px;
+	height: 79px;
+}
+* html div#mapLargeShikoku img {
+	background-image: url(../images/a1_area_map_dtl_shikoku.gif);
+}
+/* 地域図 ポップアップ(九州) */
+div#mapLargeKyushu {
+	width: 129px;
+	height: 161px;
+	position: absolute;
+	top: 220px;
+	left: 20px;
+	z-index: 370;
+	visibility: hidden;
+}
+div#mapLargeKyushu img {
+	background:url(../images/a1_area_map_dtl_kyushu.png) no-repeat;
+	width: 129px;
+	height: 161px;
+}
+* html div#mapLargeKyushu img {
+	background-image: url(../images/a1_area_map_dtl_kyushu.gif);
+}
+/* 絞り込み */
+#searchTopCondFrame {
+	clear: both;
+	position: relative;
+	width: 930px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	padding-top: 15px;
+}
+#searchTopCondTable{
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	border-left: 0px solid #E6E6E6;
+	border-right: 0px solid #E6E6E6;
+	border-top: 0px solid #E6E6E6;
+	border-bottom: 0px solid #E6E6E6;
+	border-collapse: collapse;
+}
+#searchTopCondTable th {
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 11px;
+	padding-bottom: 4px;
+	border-bottom: 0px solid #E6E6E6;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+}
+/* フラグ項目 */
+#searchTopCondTable td.condFlgTd {
+	width: 100%;
+	background-color: #F2F4F5;
+	text-align: left;
+	vertical-align: middle;
+}
+/* リスト項目 */
+#searchTopCondTable td.condKbnKeiT {
+	border-top: 0px solid #E6E6E6;
+	background-color: #F2F4F5;
+	font-size: 0px;
+}
+#condListTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+#condListTable td {
+	width: 100%;
+	padding-left: 9px;
+	padding-bottom: 4px;
+	background-color: #F2F4F5;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+
+/* 検索結果一覧【住所リスト（1列）】
+-------------------------------------------------- */
+#searchListTitle {
+	width: 600px;
+	margin-top: 30px;
+	border-bottom: 1px solid #667777;
+}
+#searchListTitle td {
+	color: #7D7D7D;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+#searchListExp {
+	width: 600px;
+	margin-top: 20px;
+}
+#searchListExp td {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+#searchListData {
+	width: 600px;
+	margin-top: 5px;
+	border: 1px solid #667777;
+	border-collapse: collapse;
+}
+#searchListData td {
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px solid #667777;
+	background-color: #F2F4F5;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+#searchListData a:link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchListData a:visited {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchListData a:hover {
+	display: block;
+	width: 100%;
+	height: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchListData a:active {
+	display: block;
+	width: 100%;
+	height: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+.searchListPage {
+	width: 600px;
+	margin-top: 5px;
+	border: 0px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+.searchListPage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.searchListPage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+.searchListPage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+.searchListPage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+
+/* 検索結果一覧【駅リスト、施設リスト】
+-------------------------------------------------- */
+#searchTableTitle {
+	width: 600px;
+	margin-top: 30px;
+	border-bottom: 1px solid #667777;
+}
+#searchTableTitle td {
+	color: #7D7D7D;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+#searchTableExp {
+	width: 600px;
+	margin-top: 20px;
+}
+#searchTableExp td {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+table.searchTableData {
+	width: 600px;
+	margin-bottom: 3px;
+	border: 1px solid #667777;
+	border-collapse: collapse;
+	background-color: #F2F4F5;
+}
+/* safari only \*/
+html:\66irst-child table.searchTableData {
+	margin-bottom: 3px;
+}
+/* end */
+table.searchTableData td {
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #667777;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+table.searchTableData a:link {
+	display: block;
+	width: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+table.searchTableData a:visited {
+	display: block;
+	width: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+table.searchTableData a:hover {
+	display: block;
+	width: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+table.searchTableData a:active {
+	display: block;
+	width: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchTablePage {
+	width: 600px;
+	margin-top: 5px;
+	border: 0px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+#searchTablePage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchTablePage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchTablePage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchTablePage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 駅リスト（路線名） */
+.searchTableRosenNm {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+}
+/* 検索結果一覧【住所リスト（３列）】
+-------------------------------------------------- */
+#searchAddrTableTitle {
+	width: 600px;
+	margin-top: 30px;
+	border-bottom: 1px solid #667777;
+}
+#searchAddrTableTitle td {
+	color: #7D7D7D;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+#searchAddrTableExp {
+	width: 600px;
+	margin-top: 20px;
+}
+#searchAddrTableExp td {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+table.searchAddrTableData {
+	width: 600px;
+	margin-bottom: 3px;
+	border: 1px solid #667777;
+	border-collapse: collapse;
+	background-color: #F2F4F5;
+}
+/* IE6 only */
+_table.searchAddrTableData {
+	margin-bottom: 2px;
+}
+/* IE7 only */
+*table.searchAddrTableData {
+	margin-bottom: 2px;
+}
+/* safari only \*/
+html:\66irst-child table.searchAddrTableData {
+	margin-bottom: 3px;
+}
+/* end */
+.searchAddrTableData td {
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #667777;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+.searchAddrTableData a:link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+.searchAddrTableData a:visited {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+.searchAddrTableData a:hover {
+	display: block;
+	width: 100%;
+	height: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+.searchAddrTableData a:active {
+	display: block;
+	width: 100%;
+	height: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchAddrTablePage {
+	width: 600px;
+	margin-top: 5px;
+	border: 0px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+#searchAddrTablePage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchAddrTablePage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchAddrTablePage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchAddrTablePage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 検索結果一覧【拠点リスト】
+-------------------------------------------------- */
+#searchShopListTitle {
+	width: 600px;
+	border-bottom: 1px solid #667777;
+	margin-top: 30px;
+}
+#searchShopListTitle td {
+	color: #7D7D7D;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	word-break: break-all;
+}
+#searchShopListPrintLink {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+#searchShopListExp {
+	width: 600px;
+	margin-top: 20px;
+}
+#searchShopListExp td {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+#searchShopListData {
+	width: 600px;
+	margin-top: 5px;
+	border: 1px solid #667777;
+	border-collapse: collapse;
+}
+#searchShopListData td {
+	background-color: #F2F4F5;
+	text-align: left;
+}
+td.searchShopListDataNm {
+	width: 270px;
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px solid #667777;
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+td.searchShopListDataNm a:link {
+	display: block;
+	width: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+td.searchShopListDataNm a:visited {
+	display: block;
+	width: 100%;
+	color: #0000EE;
+	text-decoration: underline;
+}
+td.searchShopListDataNm a:hover {
+	display: block;
+	width: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+td.searchShopListDataNm a:active {
+	display: block;
+	width: 100%;
+/*	background-color: ;*/
+	color: #F58344;
+	text-decoration: underline;
+}
+td.searchShopListDataDt {
+	padding: 2px 5px 2px 5px;
+	border-left: 1px solid #667777;
+	border-bottom: 1px solid #667777;
+}
+.searchShopListDtTable {
+	width: 100%;
+	margin: 0px;
+	border: 0px;
+}
+.searchShopListDtTable td {
+	margin: 0px;
+	padding: 2px 0px 2px 0px;
+	border: 0px;
+	background-color: white;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+}
+#searchShopListPage {
+	width: 600px;
+	margin-top: 5px;
+	border: 0px;
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+}
+#searchShopListPage a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchShopListPage a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchShopListPage a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchShopListPage a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 検索結果一覧【複合】
+-------------------------------------------------- */
+#searchCombFrame {
+	width: 700px;
+	border: 0px;
+	border-collapse: collapse;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#searchCombListTitle {
+	width: 700px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #B2B2B2;
+}
+#searchCombListTitle td {
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.searchCombListData {
+	width: 100%;
+	margin-top: 5px;
+	border: 1px solid #B2B2B2;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+.searchCombListData td {
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px solid #B2B2B2;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+.searchCombListData a:link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListData a:visited {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListData a:hover {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	color: #73AAFF;
+	text-decoration: underline;
+}
+.searchCombListData a:active {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	color: #73AAFF;
+	text-decoration: underline;
+}
+.searchCombListPage {
+	width: 100%;
+	margin-top: 5px;
+	border: 0px;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+}
+.searchCombListPage th {
+	text-align: left;
+}
+.searchCombListPage td {
+	text-align: right;
+}
+.searchCombListPage a:link {
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListPage a:visited {
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListPage a:hover {
+	color: #73AAFF;
+	text-decoration: underline;
+}
+.searchCombListPage a:active {
+	color: #73AAFF;
+	text-decoration: underline;
+}
+.searchCombListInnerTable {
+	width: 100%;
+	margin: 0px;
+	border: 0px;
+}
+.searchCombListInnerTable td {
+	margin: 0px;
+	padding: 2px 0px 2px 0px;
+	border: 0px;
+	background-color: white;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+}
+.searchCombListInnerTable a:link {
+	display: block;
+	width: 100%;
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListInnerTable a:visited {
+	display: block;
+	width: 100%;
+	color: #0066FF;
+	text-decoration: none;
+}
+.searchCombListInnerTable a:hover {
+	display: block;
+	width: 100%;
+	background-color: #ffffff;
+	color: #73AAFF;
+	text-decoration: underline;
+}
+.searchCombListInnerTable a:active {
+	display: block;
+	width: 100%;
+	background-color: #ffffff;
+	color: #73AAFF;
+	text-decoration: underline;
+}
+/* 検索結果エラー画面
+-------------------------------------------------- */
+#searchErrorTitle {
+	width: 600px;
+	border-bottom: 1px solid #667777;
+	margin-top: 30px;
+}
+#searchErrorTitle td {
+	color: #7D7D7D;
+	font-size: 14px;
+	font-weight: bold;
+}
+#searchErrorExp {
+	width: 600px;
+	margin-top: 20px;
+}
+#searchErrorExp td {
+	color: #7D7D7D;
+	font-size: 12px;
+	font-weight: normal;
+}
+#searchErrorLink {
+	width: 600px;
+	margin-top: 20px;
+	font-size: 12px;
+	font-weight: normal;
+}
+#searchErrorLink a:link {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchErrorLink a:visited {
+	color: #0000EE;
+	text-decoration: underline;
+}
+#searchErrorLink a:hover {
+	color: #F58344;
+	text-decoration: underline;
+}
+#searchErrorLink a:active {
+	color: #F58344;
+	text-decoration: underline;
+}
+/* 地域図
+-------------------------------------------------- */
+#searchMapFrame {
+	position: relative;
+	overflow: visible;
+	clear: both;
+/*	height: ;*/
+	margin-top:10px;
+	margin-left:auto; 
+	margin-right:auto; 
+	text-align:center; 
+}
+
+/* 路線図
+--------------------------------------------------*/
+/* メイン路線図コンテナ */
+div#zenrinMapAreaRailways {
+	width: 733px;
+	height: 500px;
+}
+div#mainColumnRailways {
+	position: relative;
+	clear: both;
+	overflow: hidden;
+	width: 733px;
+	height: 434px;
+	top: 20px;
+	left: 3px;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	border: 1px solid #bfbfbf;
+	background-image: none;
+}
+* html div#mainColumnRailways {}
+/* サブ路線図（開いた状態） */
+div#subRailwayMapBase {
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 0;
+	right: 4px;
+	z-index: 99999;
+	border: 1px solid #bfbfbf;
+	background: none;
+	background-color: #ffffff;
+	text-align: left;
+}
+/* サブ路線図（閉じた状態） */
+div#subRailwayMapBaseClose {
+	position: absolute;
+	visibility: hidden;
+	width: auto;
+	height: auto;
+	top: 0;
+	right: 4px;
+	z-index: 99999;
+	border: 1px solid #bfbfbf;
+	background: none;
+	background-color: #ffffff;
+	text-align: right;
+}
+/* サブ路線図コンテナ */
+div#subRailwayMapArea {
+	position: relative;
+	margin: 0 auto;
+}
+/* ヘルプ「閉じる」 */
+p#closeLayerHelp {
+	position: absolute;
+	z-index: 999999;
+	top: 403px;
+	right: 17px;
+	margin: 0;
+}
+/* ヘルプ */
+div#controlHelpArea {
+	position: absolute;
+	width: 232px;
+	height: 93px;
+	bottom: 4px;
+	right: 3px;
+	z-index: 99999;
+	background: url(../images/railway_guide.png) 0 0 no-repeat;
+}
+

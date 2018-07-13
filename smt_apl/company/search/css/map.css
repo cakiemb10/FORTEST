@@ -1,0 +1,176 @@
+@charset "euc-jp";
+/* CSS Document */
+
+.z_map_body header h1{
+	position:absolute;
+	top:4px;
+	left:4px;
+	display:block;
+	width:145px;
+	font-size: 1px;
+	background-color:#014eb7;
+	padding: 7px 12px;
+	font-weight: normal;
+	vertical-align:middle;
+	z-index:9999;
+}
+
+/* 縮尺プルダウン */
+.z_map_lvl_select{
+	position:absolute;
+	top:4px;
+	right:4px;
+	font-size:110%;
+	z-index:9999;
+}
+
+/* 「現在地からルート案内」ボタン */
+.z_map_btn_locroute{
+	position:absolute;
+	top:4px;
+	left:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「出発地指定してルート案内」ボタン */
+.z_map_btn_searchroute{
+	position:absolute;
+	top:38px;
+	left:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「元の位置へ」ボタン */
+.z_map_btn_reset{
+	position:absolute;
+	bottom:74px;
+	right:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「店舗情報」ボタン */
+.z_map_btn_inf{
+	position:absolute;
+	bottom:40px;
+	right:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「店舗一覧」ボタン */
+.z_map_btn_nlist{
+	position:absolute;
+	bottom:40px;
+	right:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「最寄り施設」ボタン */
+.z_map_btn_npoi{
+	position:absolute;
+	bottom:108px;
+	left:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「最寄り駅」ボタン */
+.z_map_btn_neki{
+	position:absolute;
+	bottom:74px;
+	left:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「検索TOP」ボタン */
+.z_map_btn_top{
+	position:absolute;
+	bottom:40px;
+	left:1px;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 「地図閲覧規約」ボタン */
+.z_map_btn_copy{
+	position:absolute;
+	bottom:40px;
+	width:100px;
+	left:0;
+	right:0;
+	margin:0 auto;
+	font-size:100%;
+	z-index:9999;
+}
+
+/* 縮尺コントロールボタン */
+.z_map_lvl_scaleP {
+	position:absolute;
+	width:42px;
+	height:52px;
+	top:4px;
+	right:4px;
+	z-index:9999;
+}
+.z_map_lvl_scaleM {
+	position:absolute;
+	width:42px;
+	height:52px;
+	top:56px;
+	right:4px;
+	z-index:9999;
+}
+
+/* フキダシ */
+#z_map_msg {
+	width: 210px;
+	max-height: 200px;
+	overflow: auto;
+}
+#z_map_msg a {
+	color: #00F;
+}
+#z_map_msg a:active {
+	color: #00F;
+}
+#z_map_msg a:visited {
+	color: #00F;
+}
+.z_map_msg_cols {
+	padding-top: 5px;
+}
+
+/* 読み込み中 */
+#ZdcEmapWait {
+	z-index: 10110;
+	display: none;
+	position: absolute;
+	width: 121px;
+	height: 31px;
+	top: 0;
+	left: 0;
+}
+#ZdcEmapWait-bgimg {
+	display:block;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+}
+#ZdcEmapWait-animg {
+	display:block;
+	position:absolute;
+	top:4px;
+	left:4px;
+}
+#ZdcEmapWait-text {
+	position: absolute;
+	top: 8px;
+	left: 24px;
+	font-size:10px;
+}
+

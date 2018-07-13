@@ -1,0 +1,61 @@
+<?PHP
+// ------------------------------------------------------------
+// テンプレートを表示するだけ
+// 
+// 2011/10/15 Y.Matsukawa	新規作成
+// 2011/12/05 Y.Matsukawa	別CID参照
+// 2015/02/16 F.Yokoi		テキストフォーム対応
+// 2015/09/25 H.Yasunaga	日本郵便向けカスタマイズ 通販事業者毎に絞り込み条件を変えるため
+// 2016/07/27 Y.Uesugi		SSL許可時のアイコンCGI SSL対応
+// ------------------------------------------------------------
+require_once('/home/emap/src/p/inc/define.inc');
+require_once('/home/emap/src/p/inc/act_get_parm.inc');
+
+//-------------------
+// 画面設定
+//-------------------
+$tpl["_jsSearch"] = "ZdcEmapSearchShopClick()";
+//$tpl["_cgiIconimg"] = sprintf("%s?cid=%s&icon_id=", $D_SSAPI["icon_select_g"], $D_CID);		mod 2011/12/05 Y.Matsukawa
+$tpl["_cgiIconimg"] = sprintf("%s?cid=%s&icon_id=", $D_SSAPI["icon_select_g"], $D_ICON_CID);
+//$tpl["_cgiSysIconimg"] = sprintf("%s?cid=%s&icon_id=", $D_SSAPI["sys_icon_select"], $D_CID);		mod 2011/12/05 Y.Matsukawa
+$tpl["_cgiSysIconimg"] = sprintf("%s?cid=%s&icon_id=", $D_SSAPI["sys_icon_select"], $D_DATA_CID);
+$tpl["_cgiSysIconimgSSL"] = sprintf("%s?cid=%s&icon_id=", $D_SSAPI["sys_icon_select_ssl"], $D_DATA_CID);	//add 2016/07/27 Y.Uesugi
+//検索条件
+for($i = 1;$i <= 200;$i ++) {
+	$cond = "cond".$i;
+	if($_VARS[$cond] != '') {
+		if($_VARS[$cond]) {
+			//check
+			$tpl[$cond."chk"] = "checked";
+		}
+		//select
+		$tpl[$cond."_".trim($_VARS[$cond], "&")."sel"] = "selected";
+		//radio
+		$tpl[$cond."_".trim($_VARS[$cond], "&")."chk"] = "checked";
+		//text
+		$tpl[$cond] = trim($_VARS[$cond], "&");// add 20150216 F.Yokoi
+	}
+}
+$p_tod = "";
+if ($adcd != "") $p_tod = substr($adcd, 0, 2);
+else if ($area != "" && ctype_digit(substr($area, 0, 2))) $p_tod = substr($area, 0, 2);
+if ($p_tod != "") {
+	$tpl["p_tod"] = $p_tod;
+	$tpl["p_tod_$p_tod"] = 1;
+}
+
+// add H.Yasunaga 2015/09/25 [
+// 日本郵便向けカスタマイズ
+// 店舗絞込を通販業者毎に変えるため
+if (isset($D_JPOST_CUSTOM) && D_JPOST_CUSTOM) {
+	$tpl['JPOST_COND_TOP'] = $JPOST_SEARCH_COND[$p_s2];
+}
+// add H.Yasunaga 2015/09/25]
+
+//-------------------
+// 画面出力
+//-------------------
+// コンテンツ
+ZdcLogPut(0);
+htmloutput($D_SYSDIR_COMPANY.'cond.tpl', $tpl);
+?>

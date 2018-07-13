@@ -1,0 +1,78 @@
+<?PHP
+// ------------------------------------------------------------
+// 施設リスト検索
+// 
+// 2012/04/24 Y.Matsukawa	新規作成
+// 2012/09/10 Y.Matsukawa	【不具合修正】任意パラメータに「&」を含めると正しく引き継がれない、任意パラメータに半角スペース指定すると消える
+// ------------------------------------------------------------
+require_once('/home/emap/src/smt/inc/define.inc');
+
+//-------------------
+// Basic認証
+//-------------------
+require_once('/home/emap/src/smt/inc/act_basic_auth.inc');
+
+//-------------------
+// 動作許可チェック
+//-------------------
+require_once('/home/emap/src/smt/inc/act_accept.inc');
+
+//-------------------
+// パラメータ処理
+//-------------------
+require_once('/home/emap/src/smt/inc/act_get_freeparm.inc');
+
+if(!$err) {
+	//-------------------
+	// 引き継ぎパラメータ
+	//-------------------
+	require_once('/home/emap/src/smt/inc/act_get_parm.inc');
+	//-------------------
+	// 画面設定
+	//-------------------
+	$param = '';
+	if ($mode != '') $param .= "&mode=$mode";
+	if ($kid != '')  $param .= "&kid=$kid";
+	// function
+	// ロード時処理
+	$tpl['_jsInit'] = sprintf('javascript:ZdcEmapSearchPoiLInit();ZdcEmapSearchPoiL(\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',1);',
+						ZdcEsc4JsLiteral($jnrmn),
+						ZdcEsc4JsLiteral($jnr),
+						ZdcEsc4JsLiteral($area),
+						ZdcEsc4JsLiteral($tod),
+						//ZdcEsc4JsLiteral($pl_prm_all.$param.($freeparms?'&'.$freeparms:''))		mod 2012/09/10 Y.Matsukawa
+						ZdcEsc4JsLiteral($pl_prm_enc_all.$param.($freeparms_enc?'&'.$freeparms_enc:''))
+	);
+	// js
+	$j = 0;
+	$tpl['js'][$j]['src'] = $D_DIR_BASE_G.'zdcemaphttp.js';
+	$tpl['js'][$j]['charset'] = 'EUC-JP';
+	$j++;
+	$tpl['js'][$j]['src'] = $D_DIR_BASE_G.'common.js';
+	$tpl['js'][$j]['charset'] = 'EUC-JP';
+	$j++;
+	$tpl['js'][$j]['src'] = $D_DIR_BASE_G.'search.js';
+	$tpl['js'][$j]['charset'] = 'EUC-JP';
+}
+
+$tpl['D_URL_SEARCH_TOP'] .= '?'.$pl_prm_enc_all;
+if($freeparms_enc) $tpl['D_URL_SEARCH_TOP'] .= '&'.$freeparms_enc;
+
+if ($mode == 'rs') $tpl['search_top'] = 1;		// 検索TOPリンクを消す
+
+//-------------------
+// 画面出力
+//-------------------
+$tpl['err'] = $err;
+if(!$err) {
+	ZdcLogPut(0);
+	for($i = 0;$i <= 4;$i ++)
+		htmloutput($D_SYSDIR_COMPANY.'pageview_'.$i.'.tpl', $tpl);
+	htmloutput($D_SYSDIR_COMPANY.'search_poi.tpl', $tpl);
+	for($i = 6;$i <= 9;$i ++)
+		htmloutput($D_SYSDIR_COMPANY.'pageview_'.$i.'.tpl', $tpl);
+} else {
+	ZdcLogPut(1);
+	htmloutput($D_SYSDIR_COMPANY.'errorview.tpl', $tpl);
+}
+?>
